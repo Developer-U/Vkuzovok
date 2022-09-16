@@ -1,0 +1,189 @@
+.price-page {
+  padding-bottom: 160px;
+
+  &__heading {
+    margin-bottom: 2.5rem;
+  }
+
+  &__tags {
+    margin-bottom: 2.7rem;
+  }
+}
+
+.price-filters {
+  margin-bottom: 1.3rem;
+}
+
+.price-art {
+  display: none;
+}
+
+.price-art:first-of-type , .price-art-active {
+  display: block;
+}
+
+.price-times {
+  min-height: 116px;
+  margin: 0 0 2.5rem;
+  padding: 26px 34px 20px 30px;
+  background-color: $greyPlashka;
+  border-radius: 40px;
+
+
+
+  &__click {
+    width: 27%;
+  }
+
+  &__tar {
+    margin-bottom: 7px;
+    font-size: 14px;
+    line-height: 20px;
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+
+  &__time {
+    width: 37%;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__work {
+    width: 36%;
+  }
+
+  &__img {
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    padding: 0;
+
+    fill: $black;
+  }
+}
+
+.js-day {
+  font-family: $montserratBold;
+}
+
+.price-times-on {
+  color: $white;
+  background-color: $black;
+}
+
+.white-text {
+  color: $white;
+}
+
+.price-tabs {
+  margin-right: 4.6rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__item {
+    margin-right: 1.3rem;
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 24px;
+    color: $greyText;
+
+    &.tabs-link-active {
+      font-family: $montserratBold;
+      color: $black;
+    }
+  }
+}
+
+.price-table {
+  border-spacing: 0;
+  width: 100%;
+
+  & td {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+
+  &__row {
+    border-bottom: 1px solid #eee;
+
+    &_head td {
+      padding-top: 22px;
+      padding-right: 12px;
+      padding-bottom: 8px;
+      font-family: $montserratBold;
+      text-transform: uppercase;
+    }
+  }
+
+  &__first {
+    width: 30%;
+  }
+
+  &__cell {
+    width: 16%;
+    padding-right: 20px;
+    vertical-align: top;
+
+    &_third {
+      width: 13.5%;
+    }
+
+    &_fourth {
+      width: 14%;
+    }
+
+    &_fifth {
+      width: 14%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__box {
+    display: block;
+    min-height: 99px;
+    padding-top: 39px;
+  }
+
+  &__price {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__old {
+    font-size: 16px;
+    line-height: 24px;
+    color: $greyText;
+  }
+
+  &__btn {
+    width: 110px;
+    min-height: 38px;
+    font-size: 12px;
+    line-height: 120%;
+    color: $black;
+  }
+}
+
+.js-priceTab.active {
+  border-color: $black;
+  background-color: $black;
+}
+
+.js-priceTab.active .tags-list__link {
+  color: $white;
+}

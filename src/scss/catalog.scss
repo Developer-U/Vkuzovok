@@ -1,0 +1,120 @@
+.services {
+  margin-bottom: 0;
+
+  &__cont {
+    z-index: 2;
+
+@include relative();
+  }
+
+  &__bg {
+    z-index: -1;
+    top: 22vw;
+    right: 8vw;
+    width: 77%;
+    height: 58vh;
+  }
+
+  &__heading {
+    margin-bottom: 3.8rem;
+  }
+}
+
+.services-tabs {
+  margin-bottom: 3.8rem;
+
+  &__item {
+    margin-right: 3.8rem;
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 29px;
+    color: $greyText;
+  }
+}
+
+.tabs-link-active {
+  font-family: $montserratBold;
+  color: $black;
+}
+
+.services-article {
+  display: none;
+  margin-bottom: 1rem;
+
+  &__heading {
+    margin-bottom: .5rem;
+    font-size: 24px;
+    font-family: $montserratBold;
+    line-height: 130%;
+  }
+
+  &__price {
+    font-size: 40px;
+    line-height: 49px;
+  }
+
+  &__up {
+    padding: 45px 74px 40px 47px;
+  }
+
+  &__item {
+    width: 31%;
+    min-height: 324px;
+    margin-right: 3.5%;
+    margin-bottom: 3.6rem;
+
+    &:nth-child(3n+1) {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2.6rem;
+    background-size: contain;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    &_one {
+      background-image: url("../images/services1.svg");
+    }
+
+    &_two {
+      background-image: url("../images/services2.svg");
+    }
+
+    &_three {
+      background-image: url("../images/services3.svg");
+    }
+
+    &_four {
+      background-image: url("../images/services4.svg");
+    }
+
+    &_five {
+      background-image: url("../images/services5.svg");
+    }
+
+    &_six {
+      background-image: url("../images/services6.svg");
+    }
+  }
+
+  &__white {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border-radius: 40px;
+  }
+}
+
+.services-article:first-of-type , .services-article-active {
+  display: flex;
+}

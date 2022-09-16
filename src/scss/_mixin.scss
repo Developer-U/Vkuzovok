@@ -1,0 +1,105 @@
+@mixin relative {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin yellowBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: $montserratBold;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $black;
+  background-color: $yellow;
+  border-radius: 25px;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+  &:hover , &:focus , &:active {
+    color: $white;
+    background-color: $black;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  }
+}
+
+@mixin greenBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: $montserratBold;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green;
+  border-radius: 50px;
+  transition: background-color .3s ease-in-out;
+  &:hover , &:focus , &:active {
+    background-color: $black;
+    transition: background-color .3s ease-in-out;
+  }
+}
+
+@mixin transpBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid $white;
+  font-size: 16px;
+  font-family: $montserratBold;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $white;
+  background-color: transparent;
+  border-radius: 50px;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+  &:hover , &:focus , &:active {
+    border-color: $deepGreen;
+    background-color: $deepGreen;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+  }
+}
+
+@mixin borderBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #ddd;
+  font-size: 12px;
+  font-family: $montserratBold;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $black;
+  background-color: transparent;
+  border-radius: 100px;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
+  &:hover , &:focus , &:active {
+    border-color: $deepGreen;
+    color: $white;
+    background-color: $deepGreen;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
+  }
+}
+
+@mixin before {
+  content: "";
+  display: inline-block;
+}
+
+
+// Контейнер слева, убираем левый margin
+// Выравниваем левый padding
+
+@mixin leftZero {
+  margin-left: 0;
+  padding-left: 24px;
+}
+
+
+
+
+

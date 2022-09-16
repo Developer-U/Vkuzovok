@@ -1,0 +1,194 @@
+.reviews-article {
+  margin-bottom: 2rem;
+
+  &__image {
+    margin-bottom: 1rem;
+  }
+
+  &__article {
+    margin-bottom: 2.8rem;
+    padding-right: 4.5rem;
+  }
+}
+
+.js-reviewsTab {
+  color: $black;
+}
+
+.js-reviewsArt {
+  display: none;
+}
+
+.js-reviewsArt:first-of-type , .price-art-active {
+  display: block;
+}
+
+
+/*Наши клиенты*/
+
+.one-review {
+  margin-bottom: 2.4rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #eee;
+
+  &__image {
+    overflow: hidden;
+    width: 112px;
+    height: 100px;
+    margin-right: 8px;
+    border-radius: 55px;
+  }
+
+  &__box {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__top {
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: $montserratBold;
+    line-height: 22px;
+  }
+
+  &__author {
+    margin-bottom: 1.5rem;
+  }
+
+  &__time {
+    font-size: 14px;
+    line-height: 20px;
+    color: #8f8f8f;
+  }
+
+  &__rating {
+    width: 137px;
+    margin: 0;
+  }
+
+  &__star {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    fill: #afafaf;
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-family: $montserratMedium;
+  }
+
+  &__preview {
+    overflow: hidden;
+    width: 140px;
+    height: 105px;
+    margin-bottom: 3rem;
+  }
+}
+
+.rev-answer {
+  padding-left: 75px;
+
+@include relative();
+
+  &::before {
+    position: absolute;
+    top: -28px;
+    left: 41px;
+    width: 47px;
+    height: 88px;
+    background: url("../images/arrow-answer.svg") no-repeat center/contain;
+
+@include before();
+  }
+
+  &__image {
+    width: 116px;
+    height: 115px;
+    margin-right: 27px;
+  }
+}
+
+
+// Благодарственные письма
+
+.reviews-letters {
+  margin: 0 0 1rem 0;
+
+  &__image {
+    overflow: hidden;
+    height: 436px;
+    margin-bottom: 2.5rem;
+    padding-right: 40px;
+
+    filter: drop-shadow(0px 30px 80px rgba(0, 0, 0, .12));
+  }
+
+  &__btn {
+    width: 100%;
+    min-height: 38px;
+
+@include greenBtn();
+  }
+}
+
+.button-more {
+  display: block;
+  padding: 0 12px;
+}
+
+
+// Отзовики
+
+.rev-logos {
+  margin-bottom: 1rem;
+
+  &__image {
+    overflow: hidden;
+    height: 52px;
+    margin-right: 8rem;
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    min-width: auto;
+  }
+}
+
+.one-review__block {
+  margin-bottom: 3.5rem;
+}
+
+.one-review__descr {
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.reviews-top {
+  margin-right: 0;
+  margin-bottom: 2.5rem;
+
+  &__heading {
+    margin-bottom: 0;
+  }
+
+  &__btn {
+    width: 171px;
+    min-height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: none !important;
+
+@include yellowBtn();
+  }
+}

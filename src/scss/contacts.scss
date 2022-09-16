@@ -1,0 +1,130 @@
+.contacts {
+  padding-bottom: 60px;
+}
+
+.contacts-cont {
+  padding-top: 26px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+
+  &__text {
+    margin-bottom: 16px;
+
+    &_first {
+      width: 61%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.4rem;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &__item {
+    padding-right: 2.8rem;
+  }
+
+  &__phones {
+    margin-bottom: 1.5rem;
+  }
+
+  &__phone {
+    margin-bottom: 9px;
+    font-size: 14px;
+    font-family: $montserratBold;
+    line-height: 130%;
+
+    & a {
+      transition: color .3s ease-in-out;
+
+      &:hover , &:focus , &:active {
+        color: $deepGreen;
+        transition: color .3s ease-in-out;
+      }
+    }
+  }
+
+  &__mail {
+    font-size: 14px;
+    line-height: 20px;
+    color: #0057ff;
+  }
+
+  &__btn {
+    width: 180px;
+    min-height: 38px;
+
+@include borderBtn();
+  }
+}
+
+.contacts-cont-first {
+  padding-top: 0;
+}
+
+.contacts-cont-third {
+  padding-top: 43px;
+}
+
+.cont-social {
+  width: 145px;
+  margin: 28px 0 0;
+
+  &__item {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+
+  &__link {
+    display: block;
+    width: 24px;
+    height: 100%;
+  }
+
+  &__img {
+    width: 24px;
+    height: 24px;
+    transition: fill .3s ease-in-out;
+
+    fill: $black;
+
+    &:hover , &:focus , &:active {
+      transition: fill .3s ease-in-out;
+
+      fill: $deepGreen;
+    }
+  }
+}
+
+.call-cont {
+  width: 96px;
+  margin: 0;
+
+  &__item {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 100%;
+  }
+
+  &__img {
+    width: 32px;
+    height: 32px;
+    transition: fill .3s ease-in-out;
+
+    fill: $black;
+
+    &:hover , &:focus , &:active {
+      transition: fill .3s ease-in-out;
+
+      fill: $deepGreen;
+    }
+  }
+}

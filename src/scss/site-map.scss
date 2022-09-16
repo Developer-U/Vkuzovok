@@ -1,0 +1,30 @@
+.site-map-cont {
+  padding-bottom: 0;
+
+  &__article {
+    margin-bottom: 2.5rem;
+    padding-right: 1.2rem;
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    font-family: $montserratBold;
+    line-height: 22px;
+  }
+}
+
+.sitemap-list__item {
+  margin-bottom: 20px;
+}
+
+.sitemap-list__link {
+  transition: color .3s ease-in-out;
+
+  &:hover , &:focus , &:active {
+    color: $deepGreen;
+    transition: color .3s ease-in-out;
+  }
+}
+
+

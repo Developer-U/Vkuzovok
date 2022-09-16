@@ -1,0 +1,482 @@
+.hero-service {
+  padding-bottom: 148px;
+
+  &__cont {
+    background: url("../images/service-hero-bg.png") no-repeat right 40px top 15vh/35% auto;
+  }
+
+  &__price {
+    margin-bottom: 1rem;
+    font-size: 80px;
+    font-family: $montserratLight;
+    line-height: 98px;
+  }
+
+  &__head {
+    margin-bottom: 2px;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-family: $montserratLight;
+    line-height: 24px;
+  }
+}
+
+.serv-params {
+  margin: 0 0 1.8rem;
+
+  &__heading {
+    padding-left: 0;
+    font-size: 24px;
+    font-family: $montserratBold;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.service-calc {
+  margin: 0;
+
+@include relative();
+
+  &__input {
+    width: 49%;
+    min-height: 36px;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: $white;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, .15);
+    border-radius: 8px;
+
+    &_short {
+      width: 13%;
+    }
+
+    &_file {
+      width: 23%;
+      border: 2px dashed $black;
+      color: $black;
+      background-color: transparent;
+    }
+
+    &_type {
+      width: 23%;
+    }
+
+    &_name {
+      width: 49%;
+    }
+
+    &_phone {
+      width: 23%;
+    }
+  }
+
+  &__input[placeholder] {
+    font-size: 14px;
+    line-height: 20px;
+    color: $greyText;
+  }
+
+  &__btn {
+    position: absolute;
+    right: -266px;
+    bottom: 8px;
+    width: 253px;
+    min-height: 48px;
+    padding: 2px 6px;
+    font-size: 15px;
+
+@include yellowBtn();
+  }
+}
+
+
+/*---Prices & Advantages----*/
+
+.prices-adv {
+  padding-bottom: 32px;
+
+  &__prices {
+    width: 43.6%;
+    margin-right: 6.5rem;
+    padding: 0;
+  }
+
+  &__advantages {
+    width: 48%;
+    padding: 0;
+  }
+
+  &__heading {
+    margin-bottom: 2.8rem;
+    font-size: 32px;
+  }
+
+  &__list {
+    padding-right: 12px;
+  }
+
+  &__item {
+    margin-bottom: 1.5rem;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__price {
+    text-align: right;
+    font-size: 16px;
+    font-family: $montserratBold;
+    line-height: 24px;
+  }
+}
+
+.advan-list {
+  margin-bottom: 0;
+
+  &__item {
+    margin-bottom: 4rem;
+    padding-right: 3rem;
+    font-size: 18px;
+    font-family: $montserratBold;
+    line-height: 22px;
+  }
+}
+
+.service-types {
+  margin-bottom: 80px;
+  padding-top: 0;
+
+  &__cont {
+    width: 100%;
+  }
+
+  &__right {
+    padding-left: 2rem;
+  }
+
+  &__small {
+    bottom: -3px;
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+/*-----Service-park------*/
+
+.service-park {
+  padding-bottom: 160px;
+
+  &__heading {
+    margin-bottom: 3.6rem;
+  }
+}
+
+.park-list {
+  margin-bottom: 0;
+
+  &__item {
+    width: 23%;
+    margin-right: 2%;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    height: 174px;
+    margin-bottom: 1.2rem;
+  }
+
+  &__img {
+    width: 100%;
+    min-width: auto;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-family: $montserratBold;
+    line-height: 24px;
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+}
+
+.park-list-params {
+  width: 94%;
+
+  &__item {
+    margin-bottom: 2px;
+  }
+}
+
+
+/*----Zayavka----*/
+
+.zayavka {
+  padding-bottom: 160px;
+
+  &__cont {
+    padding: 86px 130px;
+    background-color: $greyPlashka;
+    border-radius: 120px;
+  }
+
+  &__heading {
+    margin-bottom: 1.5rem;
+  }
+
+  &__add {
+    margin-bottom: 1rem;
+    padding-left: 10px;
+    font-size: 12px;
+    font-family: $montserratMedium;
+    line-height: 120%;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: 8px;
+      left: -9px;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background: url("../images/calc-btn.svg") no-repeat center/contain;
+    }
+  }
+
+  &__btn {
+    min-height: 48px;
+    margin-right: .5rem;
+    padding: 4px 34px;
+
+@include yellowBtn();
+  }
+
+  &__agree {
+    width: 30%;
+    font-size: 10px;
+    line-height: 120%;
+  }
+}
+
+.zayavka-calc {
+  margin-bottom: 0;
+
+  &__top {
+    margin-bottom: 2.4rem;
+    padding-bottom: 2rem;
+  }
+
+  &__input {
+    margin-bottom: 6px;
+  }
+
+  &__group {
+    margin: 0;
+  }
+
+  &__one {
+    margin-bottom: 10px;
+  }
+
+  &__side {
+    width: 44%;
+
+@include relative();
+  }
+
+
+
+  &__side_left::after {
+    content: "";
+    position: absolute;
+    top: 48px;
+    right: -112px;
+    width: 90px;
+    height: 10px;
+    padding: 0;
+    background: url("../images/calc-arrow.svg") no-repeat center/contain;
+  }
+
+  &__first {
+    width: 13.5%;
+    padding-right: 1rem;
+    border-right: 1px solid $black;
+  }
+
+  &__second {
+    width: 45%;
+    padding-right: 1rem;
+    border-right: 1px solid $black;
+  }
+
+  &__third {
+    width: 42%;
+    padding-left: 27px;
+  }
+
+  &__medium {
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+  }
+
+  &__data {
+    width: 60%;
+    margin-right: 1.5rem;
+    margin-bottom: 21px;
+
+@include relative();
+  }
+
+  &__heading {
+    display: block;
+    width: 80%;
+    margin-bottom: 39px;
+    font-size: 14px;
+    font-family: $montserratBold;
+    line-height: 130%;
+
+@include relative();
+  }
+
+  &__legend {
+    width: 100%;
+    margin-bottom: 17px;
+    padding: 0;
+    font-size: 14px;
+    font-family: $montserratBold;
+    line-height: 130%;
+  }
+
+  &__subheading {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: $montserratBold;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+}
+
+.service-calc__input_address {
+  width: 78%;
+}
+
+.service-calc__input_house {
+  width: 19%;
+}
+
+.service-calc__input_phone {
+  width: 190px;
+  margin-right: 2rem;
+}
+
+.service-calc__input_date {
+  width: 59%;
+  margin-right: 1rem;
+  margin-left: auto;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 38px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: url("../images/calendar.svg") no-repeat center/contain;
+  }
+}
+
+.service-calc__input_time {
+  width: 23%;
+}
+
+.service-calc__input_promo {
+  width: 40%;
+  margin-right: .5rem;
+}
+
+.zayavka-second__item {
+  margin-bottom: 6px;
+}
+
+.zayavka-second__right {
+  padding-top: 26px;
+  padding-right: 45px;
+  padding-left: 26px;
+}
+
+.zayavka-second__heading {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.zayavka-promo {
+  margin-top: -19px;
+  padding-left: 0;
+
+  &__btn {
+    width: 160px;
+    min-height: 48px;
+
+@include greenBtn();
+  }
+
+  &__box {
+    padding-left: 12px;
+  }
+}
+
+
+/*-----Others-----*/
+
+.others {
+  padding-top: 13px;
+  padding-bottom: 156px;
+
+  &__heading {
+    margin-bottom: 4rem;
+  }
+
+  &__bg {
+    top: -5vh;
+    height: 50vh;
+  }
+}
+
+.faq-service {
+  padding-bottom: 160px;
+}
