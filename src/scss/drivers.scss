@@ -1,0 +1,28 @@
+.drivers {
+  padding-bottom: 144px;
+
+  &__image {
+    top: 26vh;
+    right: 15%;
+    left: auto;
+    width: 64%;
+    background: url("../images/drivers.png") no-repeat center right 10%/contain;
+  }
+
+  &__man {
+    position: absolute;
+    z-index: 4;
+    top: 20vh;
+    right: 17%;
+    left: auto;
+    width: 12vw;
+    height: 486px;
+    background: url("../images/man.png") no-repeat center/contain;
+  }
+
+  &__cont {
+    margin-left: 0;
+    padding: 258px 20px 40px 0;
+    text-align: left;
+  }
+}

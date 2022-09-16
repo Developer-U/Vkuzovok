@@ -1,0 +1,35 @@
+.underfined {
+  margin-bottom: 0;
+
+  &__cont {
+    width: 661px;
+    margin: 0 auto;
+    padding-top: 25px;
+  }
+
+  &__left {
+    padding-bottom: 1.5rem;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+    font-size: 72px;
+    font-family: $montserratBold;
+    line-height: 130%;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  &__image {
+    overflow: hidden;
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.underfined-types {
+  padding-top: 63px;
+}

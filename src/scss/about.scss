@@ -1,0 +1,116 @@
+.about-hero {
+  padding-bottom: 206px;
+}
+
+.about-page {
+  margin-bottom: 0;
+
+  &__cont {
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__rekv {
+    margin-top: 3.4rem;
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.about-map {
+  overflow: hidden;
+  width: 100%;
+  height: 637px;
+  border-radius: 80px;
+}
+
+.ymaps-2-1-79-balloon {
+  box-shadow: 0px 30px 80px rgba(0, 0, 0, .12) !important;
+  border-radius: 20px;
+}
+
+.ymaps-2-1-79-balloon__content ymaps {
+  width: 80% !important;
+  height: 100% !important;
+  margin: 0 auto 1rem auto;
+}
+
+.ymaps-2-1-79-balloon__layout {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 260px !important;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.ymaps-2-1-79-balloon__content {
+  width: 100%;
+  min-height: 330px !important;
+  padding: 0 !important;
+  background-color: $white;
+}
+
+.baloon__image {
+  overflow: hidden;
+  width: 98%;
+  height: 121px;
+  margin: 1rem auto 2rem;
+}
+
+.baloon__image img {
+  width: 100%;
+  height: auto;
+}
+
+.baloon__heading {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.baloon__text {
+  margin-bottom: 2rem;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.baloon__phone {
+  font-size: 12px;
+  line-height: 120%;
+}
+
+.about-types {
+  margin-bottom: 48px;
+  padding-top: 0;
+}
+
+.about-types__heading {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.about-types__left {
+  padding-top: 34px;
+}
+
+.about-post {
+  padding-bottom: 134px;
+}
+
+.map-about {
+  padding-bottom: 90px;
+}
