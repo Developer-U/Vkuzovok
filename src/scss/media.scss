@@ -40,9 +40,17 @@
     top: auto;
     bottom: 0;
   }
+
+  .bg-left-second-green {
+    top: 124vw;
+  }
 }
 
 @media screen and(max-width: 1675px) {
+  .bg-left-second-green {
+    top: 157vw;
+  }
+
   .types {
     padding-top: 23vh;
   }
@@ -96,12 +104,12 @@
     height: 40vh;
   }
 
-  .avtopark-article__image {
-    margin-right: 6.5rem;
-  }
-
   .video-block {
     padding-top: 100px;
+  }
+
+  .park-slider .swiper-pagination {
+    width: 70%;
   }
 
   .video-block__right {
@@ -234,7 +242,7 @@
   }
 
   .avtopark-article__image {
-    margin-right: 5rem;
+    margin-right: 3.5rem;
     margin-bottom: 5rem;
   }
 
@@ -346,10 +354,6 @@
     }
   }
 
-  .zayavka-calc__timing {
-    padding: 0;
-  }
-
   .zayavka-calc__heading {
     width: 100%;
   }
@@ -408,6 +412,204 @@
     top: 6vh;
     width: 11vw;
     height: 352px;
+  }
+
+  .popup-calc__scrolling {
+    width: 564px;
+    height: 98vh;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, .25);
+  }
+
+  .zayavka__cont {
+    padding: 24px;
+    border-radius: 30px;
+  }
+
+  .calc-popup-heading {
+    font-size: 24px;
+  }
+
+  .calc-popup-close {
+    top: 28px;
+    right: 24px;
+    left: auto;
+  }
+
+  .zayavka-calc__side {
+    width: 100%;
+  }
+
+  .zayavka-calc__first {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 12px;
+    border: none;
+  }
+
+  .zayavka-calc__one {
+    width: 45%;
+  }
+
+  .zayavka-calc__heading {
+    width: 100%;
+  }
+
+  .zayavka-calc__one input[type=number] {
+    display: inline-block;
+    top: 2px;
+    right: -59px;
+    left: auto;
+    margin: 0 0 0 auto;
+  }
+
+  .minus , .plus {
+    top: 14px;
+  }
+
+  .minus {
+    right: 94px;
+    left: auto;
+  }
+
+  .js-minus1 {
+    right: 112px;
+  }
+
+  .js-plus1 {
+    right: 16px;
+  }
+
+  .zayavka-calc__second {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-right: none;
+    border-bottom: 1px solid #000;
+  }
+
+  .zayavka-second__left {
+    width: 50%;
+    padding: 0;
+  }
+
+  .zayavka-second__right {
+    width: 50%;
+    padding-right: 4px;
+    padding-left: 7px;
+  }
+
+  .zayavka-calc__third {
+    width: 100%;
+    margin: 0;
+    padding-left: 27px;
+    padding-left: 12px;
+  }
+
+  #time2 {
+    position: absolute;
+    top: 17px;
+    right: 36px;
+    margin: 0;
+  }
+
+  .js-minus3 , .js-plus3 {
+    top: 29px;
+  }
+
+  .service-calc__input_phone {
+    width: 30%;
+    margin-right: 0;
+  }
+
+  .zayavka__box {
+    width: 70%;
+    padding-left: 30px;
+  }
+
+  .zayavka__agree {
+    width: 96%;
+  }
+
+  .zayavka__btn {
+    margin-bottom: 12px;
+  }
+
+  .zayavka-calc__side_left:after {
+    display: none;
+  }
+
+  .park-slider .swiper-pagination {
+    width: 80%;
+  }
+
+  .button-prev-el3 {
+    bottom: 12%;
+    left: 6%;
+  }
+
+  .button-next-el3 {
+    right: 6%;
+    bottom: 12%;
+  }
+
+  .park-slider .swiper-pagination-bullet {
+    min-height: 199px;
+  }
+
+  .bg-left-second-green {
+    top: 206vw;
+  }
+
+  .zayavka-main__cont {
+    width: 1100px;
+    padding: 60px 40px;
+    border-radius: 60px;
+  }
+
+  .zayavka-main-calc__first {
+    width: 35%;
+  }
+
+  .zayavka-main-calc__second {
+    width: 60%;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  .zayavka-main-calc__one {
+    width: 100%;
+  }
+
+  .zayavka-main-calc__one input[type=number] , #time3 {
+    position: absolute;
+    top: -6px;
+    right: 50px;
+  }
+
+  .main-timing input[type=number] {
+    margin-top: 0;
+  }
+
+  .main-minus , .main-plus {
+    top: 5px;
+  }
+
+  .main-minus , .main-minus.js-minus1 , .main-minus.js-minus2 , .main-minus.js-minus3 {
+    right: 110px;
+    left: auto;
+  }
+
+  .main-plus , .main-plus.js-plus1 , .main-plus.js-plus2 , .main-plus.js-plus3 {
+    right: 14px;
+    left: auto;
+  }
+
+  .zayzvka-main-calc__data {
+    width: 33%;
+    margin-right: 5.5rem;
   }
 }
 
@@ -619,15 +821,11 @@
     width: 70px;
   }
 
-  .zayavka-calc__first {
-    width: 20.5%;
-  }
-
-  .zayavka-calc__second {
+  .zayavka-main-calc__second {
     width: 48%;
   }
 
-  .zayavka-calc__third {
+  .zayavka-main-calc__third {
     width: 32%;
     padding-left: 20px;
   }
@@ -713,6 +911,37 @@
 
   .contacts-cont__item {
     padding-right: 12px;
+  }
+
+  .avtopark-article__image {
+    margin-right: 1.5rem;
+    margin-bottom: 6rem;
+  }
+
+  .avtopark-block {
+    margin-bottom: 46px;
+  }
+
+  .bg-left-second-green {
+    top: 294vw;
+  }
+
+
+  .zayavka-main__cont {
+    width: 100%;
+  }
+
+  .zayzvka-main-calc__data {
+    width: 33%;
+    margin-right: 12rem;
+  }
+
+  .zayavka-calc__side-main_left:after {
+    display: none;
+  }
+
+  .main-timing {
+    width: 400px;
   }
 }
 
@@ -849,7 +1078,33 @@
 
   .avtopark-article__image {
     width: 70%;
-    height: 275px;
+    height: 350px;
+    margin-bottom: 2rem;
+  }
+
+  .park-slider .swiper-pagination {
+    bottom: -131px;
+  }
+
+  .park-slider .swiper-pagination-bullet {
+    min-height: 153px;
+  }
+
+  .avtopark-block {
+    margin-bottom: 124px;
+  }
+
+  .button-prev-el3 , .button-next-el3 {
+    bottom: -7%;
+  }
+
+  .park-slider__descr {
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .avtopark-article__right {
+    width: 90%;
   }
 
   .video-block {
@@ -862,10 +1117,6 @@
 
   .avtopark__desctop {
     padding: 0 12px;
-  }
-
-  .avtopark-article__image {
-    margin-bottom: 9rem;
   }
 
   .video-block {
@@ -1081,7 +1332,7 @@
     }
   }
 
-  .zayavka__cont {
+  .zayavka-main__cont {
     padding: 60px 30px;
     border-radius: 70px;
   }
@@ -1094,11 +1345,11 @@
     width: 50px;
   }
 
-  .zayavka-calc__second {
-    width: 38%;
+  .zayavka-main-calc__second {
+    width: 54%;
   }
 
-  .zayavka-calc__third {
+  .zayavka-main-calc__third {
     width: 42%;
   }
 
@@ -1115,7 +1366,7 @@
     font-size: 14px;
   }
 
-  .zayavka__agree {
+  .zayavka-main__agree {
     width: 29%;
     font-size: 9px;
   }
@@ -1213,6 +1464,77 @@
 
   .sitemap-list__item {
     margin-bottom: 15px;
+  }
+
+  .calc-popup-heading {
+    font-size: 20px;
+  }
+
+  .park-slider .swiper-pagination {
+    width: 85%;
+  }
+
+  .park-slider__img {
+    left: 0;
+  }
+
+  .park-slider__descr {
+    font-size: 10px;
+  }
+
+  .bg-left-second-green {
+    display: none;
+  }
+
+  .zayavka-main-calc__first {
+    width: 300px;
+  }
+
+  .zayzvka-main-calc__data {
+    width: calc(100% - 440px);
+    margin-right: 40px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and(max-height: 950px) {
+  .popup-zakaz {
+    @include relative();
+  }
+
+  .popup-zakaz .popup__close {
+    position: absolute;
+    right: 24px;
+  }
+
+  .popup-zakaz .zayavka-second__image , .popup-zakaz .zayavka-second__list , .popup-zakaz .zayavka-second__right {
+    display: none;
+  }
+
+  .popup-zakaz .zayavka-second__left {
+    display: flex;
+    width: 100%;
+  }
+
+  .popup-zakaz .zayavka-second__heading {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .popup-zakaz .zayavka-calc__subheading {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and(max-height: 850px) {
+  .popup {
+    padding: 12px;
+  }
+
+
+
+  .popup-zakaz {
+    top: 0;
   }
 }
 
@@ -1718,8 +2040,8 @@
   }
 
   .zayavka__cont {
-    padding: 40px 12px;
-    border-radius: 40px;
+    padding: 20px 24px;
+    border-radius: 30px;
   }
 
   .zayavka-calc__side_left:after {
@@ -1880,6 +2202,106 @@
 
   .sitemap-list__link {
     font-size: 13px;
+  }
+
+  .popup {
+    padding: 12px;
+  }
+
+  .popup-zakaz {
+    top: 0;
+  }
+
+  .popup-zakaz .zayavka-calc__heading {
+    width: 240px;
+    margin-bottom: 10px;
+  }
+
+  .zayavka-calc__one input[type=number] {
+    right: -100px;
+  }
+
+  .popup-zakaz .js-minus1 {
+    right: 80px;
+  }
+
+  .popup-zakaz .js-plus1 , .popup-zakaz .plus {
+    right: -16px;
+  }
+
+  .zayavka-calc__one input[type=number] {
+    position: absolute;
+    top: -9px;
+    right: 21px;
+  }
+
+  .popup-zakaz .plus , .popup-zakaz .minus {
+    top: 1px;
+  }
+
+  .popup-zakaz .minus {
+    right: 80px;
+  }
+
+  .zayavka-calc__timing {
+    margin-bottom: 24px;
+  }
+
+  .popup-zakaz #time {
+    top: -8px;
+    right: 15px;
+  }
+
+  .minus , .plus {
+    top: -1px;
+  }
+
+  .popup-zakaz .js-minus3 {
+    right: 70px;
+  }
+
+  .plus {
+    right: -14px;
+  }
+
+  .js-minus1 , .js-minus2 {
+    right: 81px;
+  }
+
+  .calc-popup-heading {
+    font-size: 16px;
+  }
+
+  .zayavka-calc__subheading {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  .zayavka-calc__side {
+    width: 100%;
+    padding: 4px;
+  }
+
+  .zayavka-second__item {
+    margin-bottom: 0;
+    font-size: 10px;
+  }
+
+  .zayavka__btn {
+    font-size: 12px;
+  }
+
+  #time2 {
+    top: -9px;
+    right: 28px;
+  }
+
+  .avtopark-block {
+    margin-bottom: 0;
+  }
+
+  .zayavka-main-calc__one input[type=number] {
+    right: 48px;
   }
 }
 
@@ -2071,7 +2493,7 @@
 
     &__heading {
       margin-bottom: 20px;
-      font-size: 24px;
+      font-size: 20px;
     }
 
     &__tags {
@@ -2579,7 +3001,7 @@
     padding-bottom: 60px;
   }
 
-  .zayavka__cont {
+  .zayavka-main__cont {
     padding: 40px 12px;
     border-radius: 40px;
   }
@@ -2609,11 +3031,11 @@
     padding-left: 12px;
   }
 
-  .zayavka-calc__one {
-    width: 50%;
+  .zayavka-calc__heading {
+    width: 240px;
   }
 
-  .zayavka-calc__heading {
+  .zayavka-main-calc__heading {
     width: 78%;
   }
 
@@ -2879,7 +3301,169 @@
   .sitemap-list__link {
     font-size: 13px;
   }
+
+  .popup {
+    padding: 12px;
+  }
+
+  .popup__scrolling , .popup-calc__scrolling {
+    width: 100%;
+  }
+
+  .zayavka-calc__one {
+    width: 100%;
+  }
+
+  .zayavka-calc__heading {
+    width: 240px;
+    margin-bottom: 10px;
+  }
+
+  .popup-zakaz .js-minus1 {
+    right: 80px;
+  }
+
+  .popup-zakaz .js-plus1 , .popup-zakaz .plus {
+    right: -16px;
+  }
+
+  .zayavka-calc__one input[type=number] {
+    position: absolute;
+    top: -9px;
+    right: 21px;
+  }
+
+  .popup-zakaz .plus , .popup-zakaz .minus {
+    top: 1px;
+  }
+
+  .popup-zakaz .minus {
+    right: 80px;
+  }
+
+  .zayavka-calc__data {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .service-calc__input_date:before {
+    top: 42px;
+    left: -5px;
+  }
+
+  .zayavka-calc__timing {
+    margin-bottom: 21px;
+  }
+
+  .popup-zakaz #time , #time2 {
+    top: -7px;
+    right: 16px;
+  }
+
+  .js-minus3 {
+    right: 68px;
+  }
+
+  .service-calc__input_promo {
+    width: 59%;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .zayavka-promo__btn {
+    min-height: 36px;
+    font-size: 12px;
+  }
+
+  .service-calc__input_phone {
+    width: 100%;
+  }
+
+  .zayavka__box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .minus , .plus {
+    top: -1px;
+  }
+
+  .plus {
+    right: -14px;
+  }
+
+
+  .js-minus1 , .js-minus2 {
+    right: 81px;
+  }
+
+  label[for=time] , label[for=time2] {
+    width: 240px;
+  }
+
+  .calc-popup-heading {
+    font-size: 16px;
+  }
+
+  .zayavka-calc__side {
+    width: 100%;
+    padding: 4px;
+  }
+
+  .zayavka-second__item {
+    margin-bottom: 0;
+    font-size: 10px;
+  }
+
+  .zayavka-calc__subheading {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  .zayavka__btn {
+    font-size: 12px;
+  }
+
+  .zayavka-promo__btn {
+    width: 35%;
+  }
+
+  .avtopark-block {
+    margin-bottom: 0;
+  }
+
+  .zayavka-calc__side-main {
+    width: 100%;
+  }
+
+  .zayavka-main-calc__one input[type=number] {
+    right: 48px;
+  }
+
+  .zayzvka-main-calc__data {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  label[for=time3] {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .service-calc__input_telef {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .others {
+    padding-top: 13px;
+  }
 }
+
+
 
 @media screen and(max-width: 767px) and(max-height: 420px) {
   .avtopark-article__image {
@@ -2911,7 +3495,7 @@
     }
   }
 
-  .zayavka-second__right {
+  .zayavka-second-main__right {
     padding-right: 200px;
   }
 
@@ -2973,6 +3557,12 @@
   }
 }
 
+@media screen and(max-height: 600px) {
+  .form-popup__scrolling {
+    height: 96vh;
+  }
+}
+
 @media screen and(max-width: 375px) {
   .head-italic {
     font-size: 29px;
@@ -3016,8 +3606,8 @@
     width: 56%;
   }
 
-  label[for=time] {
-    width: 54%;
+  label[for=time] , label[for=time2] {
+    width: 96%;
   }
 
   .price-times {
@@ -3030,5 +3620,19 @@
 
   .reviews-letters__image {
     height: 398px;
+  }
+
+  .popup-zakaz .service-calc__input_promo {
+    width: 60%;
+  }
+
+  .zayavka-promo__btn {
+    width: 34%;
+    font-size: 11px;
+  }
+
+  .form-popup__scrolling {
+    width: 100%;
+    height: 88vh;
   }
 }

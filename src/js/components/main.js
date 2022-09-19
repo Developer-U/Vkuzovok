@@ -1,8 +1,58 @@
 import gsap from "gsap";
 
 
-window.addEventListener('DOMContentLoaded', function(){   
+  window.addEventListener('DOMContentLoaded', function(){    
+  
+   
+  // Добавление адреса доставки в попапе Калькулятор перевозок
+      
+  var addressCalcBtn = document.querySelectorAll('.js-addCalcAddess'); 
 
+  addressCalcBtn.forEach(function(eachaddressCalcBtn){
+    
+    eachaddressCalcBtn.addEventListener('click', function(){       
+      var AddressCalcBlock = document.getElementsByClassName('js-calcGroup');
+      var btnCalcRemove = document.querySelector('.js-removeCalcAddess');      
+      
+      var countD = 1; //Установим счётчик - при клике на кнопку будет добавляться ещё 1 блок отзывов
+      countD += 1;
+      
+      for(let i=1; i<countD; i++) {
+        var newCalcAddress = document.createElement('div');
+        newCalcAddress.classList.add('zayavka-calc__group', 'js-calcGroup', 'row', 'justify-content-between');
+        newCalcAddress.innerHTML = (`
+          <div class="zayavka-calc__side zayavka-calc__side_left ">
+          <fieldset class="row justify-content-between">
+              <legend class="zayavka-calc__legend">Откуда</legend>
+              <input class="service-calc__input zayavka-calc__input service-calc__input_address" type="text" placeholder="Улица">
+              <input class="service-calc__input zayavka-calc__input service-calc__input_house" type="text" placeholder="Дом">
+          </fieldset>
+          </div>
+
+          <div class="zayavka-calc__side zayavka-calc__side_right">
+              <fieldset class="row justify-content-between">
+                  <legend class="zayavka-calc__legend">Куда</legend>
+                  <input class="service-calc__input zayavka-calc__input service-calc__input_address" type="text" placeholder="Улица">
+                  <input class="service-calc__input zayavka-calc__input service-calc__input_house" type="text" placeholder="Дом">
+              </fieldset>
+          </div>
+        `);        
+        document.querySelector('.js-calcTop').append(newCalcAddress);        
+        btnCalcRemove.classList.add('remove-on');
+
+        btnCalcRemove.addEventListener('click', function(){
+    
+          if(AddressCalcBlock.length > 1) {          
+            newCalcAddress.style.display = 'none';
+            btnCalcRemove.classList.remove('remove-on');
+          }          
+        });
+      }
+      
+    }); 
+  });
+  
+  
 
   // // Подключаем скроллинг Simplebar 
 
@@ -12,6 +62,8 @@ window.addEventListener('DOMContentLoaded', function(){
       scrollbarMaxSize: 300
     }
   });
+
+
 
 
   // Анимация открытия списка городов
@@ -117,6 +169,106 @@ window.addEventListener('DOMContentLoaded', function(){
       
     });
 
+  });
+
+
+  // Открытие попапа Заказать машину 
+  var carField = document.querySelector('.for-zakaz');
+  var carFieldOpen = document.querySelectorAll('.js-carOpen'); 
+  var carClose = document.querySelector('.js-carClose'); 
+  var popup = document.querySelector('.popup');
+  var flag = false;  
+
+  carFieldOpen.forEach(function(carOpen){
+      carOpen.addEventListener('click', function(e){  
+        e.preventDefault();
+        
+          if(!flag) {
+          fadeIn(carField, 300, 'flex');
+            document.querySelector('body').classList.add('closed');
+          } else {
+          fadeOut(carField, 300);
+            document.querySelector('body').classList.remove('closed');          
+          }
+          
+          carClose.addEventListener('click', function(){
+            fadeOut(carField, 300);
+            document.querySelector('body').classList.remove('closed');         
+          });
+
+          popup.addEventListener('click', function(event){
+            if(this == event.target) {
+              fadeOut(carField, 300);
+              document.querySelector('body').classList.remove('closed');              
+            }
+          });                     
+      });
+  });
+
+
+  // Открытие попапа Калькулятор перевозок
+  var calcField = document.querySelector('.for-calc-popup');  
+  var calcFieldOpen = document.querySelectorAll('.js-calcOpen'); 
+  var calcClose = document.querySelector('.js-calcClose');   
+  var flag = false;  
+
+  calcFieldOpen.forEach(function(calcOpen){
+      calcOpen.addEventListener('click', function(e){  
+        e.preventDefault();
+        
+          if(!flag) {
+          fadeIn(calcField, 300, 'flex');
+            document.querySelector('body').classList.add('closed');
+          } else {
+          fadeOut(calcField, 300);
+            document.querySelector('body').classList.remove('closed');          
+          }
+          
+          calcClose.addEventListener('click', function(){
+            fadeOut(calcField, 300);
+            document.querySelector('body').classList.remove('closed');         
+          });
+
+          calcField.addEventListener('click', function(event){
+            if(this == event.target) {
+              fadeOut(calcField, 300);
+              document.querySelector('body').classList.remove('closed');              
+            }
+          });                     
+      });
+  });
+
+
+  // Открытие попапа Оставить заявку
+  var zayavkaTakeField = document.querySelector('.js-zayavkaPopup');  
+  var zayavkaTakeFieldOpen = document.querySelectorAll('.js-zayavkaOpen'); 
+  var zayavkaTakeClose = document.querySelector('.js-zayavkaClose');   
+  var flag = false;  
+
+  zayavkaTakeFieldOpen.forEach(function(zayavkaOpen){
+    zayavkaOpen.addEventListener('click', function(e){  
+        e.preventDefault();
+        
+          if(!flag) {
+          fadeIn(zayavkaTakeField, 300, 'flex');
+            document.querySelector('body').classList.add('closed');
+          } else {
+          fadeOut(zayavkaTakeField, 300);
+            document.querySelector('body').classList.remove('closed');          
+          }
+          
+          zayavkaTakeClose.addEventListener('click', function(){
+            fadeOut(zayavkaTakeField, 300);
+            document.querySelector('body').classList.remove('closed');         
+          });
+
+          zayavkaTakeField.addEventListener('click', function(event){
+            if(this == event.target) {
+              fadeOut(zayavkaTakeField, 300);
+              document.querySelector('body').classList.remove('closed');              
+            }
+          });                     
+      });
   });
 
 
@@ -308,51 +460,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 
-  // Табы на странице Отзывы
-
-  // Проитерируем кнопки выбора табов
-  document.querySelectorAll('.js-reviewsTab').forEach(function(tabsBtn7){
-    tabsBtn7.addEventListener('click', function(event){
-    event.preventDefault();
-
-    const path7 = event.currentTarget.dataset.path7;
-
-    // Проитерируем все ссылки и при клике снимем все активные значения
-    document.querySelectorAll('.js-reviewsTab').forEach(function(oneTab7){
-      oneTab7.classList.remove('tab-btn-active');     
-    });
-
-    // Соответствующей кнопке зададим активное значение
-    document.querySelector(`[data-path7='${path7}']`).classList.add('tab-btn-active');      
-      
-
-    // Итерируем табы и закрываем все открытые табы
-    document.querySelectorAll('.js-reviewsArt').forEach(function(tabContent7){
-        tabContent7.classList.remove('price-art-active');
-
-        // Зададим в переменную первый Таб (в стилях делаем первый элемент открытым)        
-        var firstReviewsTab = document.querySelector('.js-reviewsArt:first-of-type');
-
-        // Соответственно при клике на любую кнопку его сразу закрываем
-        firstReviewsTab.style.display = 'none';
-
-        // Закинем в переменную текущий Таб с соответствующим атрибутом data-target       
-        var currentTab7 = document.querySelector(`[data-target7="${path7}"]`);
-
-        
-        if(currentTab7.getAttribute('data-target7') == firstReviewsTab.getAttribute('data-target7')) {
-          firstReviewsTab.style.display = 'flex';
-        } else {
-          firstReviewsTab.style.display = 'none';
-
-          currentTab7.classList.add('price-art-active');
-        }
-
-    });
-
-  });
-    
-  });
+ 
 
 
 
@@ -389,15 +497,6 @@ window.addEventListener('DOMContentLoaded', function(){
     var letterBtn = document.querySelector('.reviews-letters__btn');
     letterBtn.style.display = 'none';
   }
-
-  
-  
-    
-
-  
-
-
-
 });
 
 

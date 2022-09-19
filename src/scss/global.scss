@@ -134,7 +134,7 @@ img {
 /*Simplebar*/
 
 .simplebar-track.simplebar-vertical {
-  visibility: hidden !important;
+  // visibility: hidden !important;
   width: 7px;
   background-color: rgba(0,0,0,.25);
 }
@@ -257,7 +257,7 @@ img {
 }
 
 .bg-left-second-green {
-  top: 85vw;
+  top: 96vw;
   left: 0;
   width: 18vw;
   height: 64vw;
@@ -380,6 +380,7 @@ body section , body header , body footer {
 /*Подчёркивание нижней серой линией*/
 
 .under-line {
+  margin-bottom: 24px;
   padding-bottom: 10px;
   border-bottom: 1px solid $black;
 }
@@ -437,8 +438,8 @@ body section , body header , body footer {
   background-color: transparent;
 }
 
-#time {
-  margin: 0 auto 0 32px;
+#time2 {
+  margin: 10px auto 0 auto;
 }
 
 .plus , .minus {
@@ -652,7 +653,6 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   &__cont {
     padding: 24px;
     background-color: $white;
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, .25);
   }
 
   &__heading {
@@ -661,10 +661,252 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
     font-family: $montserratBold;
     line-height: 22px;
   }
+
+  &__subheading {
+    width: 70%;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+// Попапы контактные формы / Form popups
+
+.form-popup {
+  width: 100%;
+
+  &__scrolling {
+    width: 320px;
+    height: 550px;
+    background-color: $white;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, .25);
+  }
+
+  &__cont {
+    width: 100%;
+    height: fit-content;
+    padding: 24px;
+    text-align: center;
+  }
+
+  &__close {
+    display: block;
+    text-align: left;
+  }
+}
+
+.popup-form {
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1rem;
+    padding: 10px 8px;
+    text-align: center;
+    color: #737373;
+    box-shadow: 0 6px 10px rgb(0 0 0 / 15%);
+    border-radius: 8px;
+  }
+
+  &__textarea {
+    height: 60px;
+    text-align: left;
+  }
+
+  &__file {
+    margin-bottom: 2rem;
+    border: 2px dashed $black;
+    border-radius: 0;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 1rem;
+
+@include greenBtn();
+  }
+
+  &__agree {
+    font-size: 10px;
+    font-family: $montserratMedium;
+    line-height: 120%;
+  }
+}
+
+.popup-form__file[placeholder] {
+  font-family: $montserratMedium;
+  color: $black;
 }
 
 // Заказать машину
 
-.popup-zakaz {
+.for-zakaz {
+  display: none;
+}
+
+.popup__scrolling {
   width: 564px;
+  height: 98vh;
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, .25);
+}
+
+.popup-zakaz {
+  width: 100%;
+}
+
+.popup-zakaz .zayavka-calc__one {
+  width: 45%;
+}
+
+.zayavka-calc__top {
+  margin-bottom: 24px;
+  padding-bottom: 0;
+}
+
+.popup-zakaz .zayavka-calc__one input[type=number] , .zayavka-calc__timing input[type=number] {
+  display: inline-block;
+  top: 2px;
+  right: -59px;
+  left: auto;
+  margin: 0 0 0 auto;
+}
+
+.popup-zakaz .minus , .popup-zakaz .plus {
+  top: 14px;
+}
+
+.popup-zakaz .minus {
+  right: 94px;
+  left: auto;
+}
+
+.popup-zakaz .js-minus1 {
+  right: 112px;
+}
+
+.popup-zakaz .js-plus1 {
+  right: 16px;
+}
+
+.popup-zakaz .js-minus3 , .popup-zakaz .js-plus3 {
+  top: 29px;
+}
+
+.popup-zakaz .zayavka-calc__first {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 12px;
+  border: none;
+}
+
+.popup-zakaz .zayavka-calc__second {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-right: none;
+  border-bottom: 1px solid #000;
+}
+
+.popup-zakaz .zayavka-calc__third {
+  width: 100%;
+  margin: 0;
+  padding-left: 12px;
+}
+
+.popup-zakaz .zayavka-calc__heading {
+  width: 100%;
+}
+
+.popup-zakaz .zayavka-second__left {
+  width: 50%;
+  padding: 0;
+}
+
+.popup-zakaz .zayavka-second__right {
+  width: 50%;
+  padding-right: 4px;
+  padding-left: 7px;
+}
+
+.popup-zakaz .zayavka-calc__side {
+  width: 100%;
+}
+
+.popup-zakaz .zayavka-calc__side_left:after {
+  display: none;
+}
+
+.popup-zakaz .zayavka__box {
+  width: 70%;
+  padding-left: 30px;
+}
+
+.popup-zakaz .service-calc__input_phone {
+  width: 30%;
+  margin-right: 0;
+}
+
+.popup-zakaz .zayavka__agree {
+  width: 96%;
+}
+
+.popup-zakaz label[for="time"] {
+  @include relative();
+}
+
+.popup-zakaz #time {
+  position: absolute;
+  top: 17px;
+  right: 36px;
+}
+
+.zayavka-calc__timing {
+  padding: 0;
+}
+
+
+// Попап калькулятор доставки
+
+.for-calc-popup {
+  display: none;
+}
+
+.popup-calc__scrolling {
+  width: 1380px;
+  height: 79vh;
+  border-radius: 30px;
+}
+
+.calc-popup-close {
+  position: absolute;
+  left: 1231px;
+}
+
+
+// Скрываем горизонтальный скролл в блоке новости
+
+.news-cont__right .simplebar-track.simplebar-vertical {
+  visibility: hidden !important;
+}
+
+
+.js-reviewPopup , .js-zayavkaPopup {
+  display: none;
+}
+
+// Кнопки добавления адреса в заявках
+
+.js-removeAddess , .js-removeCalcAddess , .js-removeOfficeAddess {
+  display: none;
+}
+
+.js-removeAddess::before , .js-removeCalcAddess::before , .js-removeOfficeAddess::before {
+  transform: rotate(45deg);
+}
+
+.remove-on {
+  display: block;
 }

@@ -179,22 +179,22 @@
                             <a class="menu-top__link" href="about.html">О компании</a>
                         </li>
                         <li class="menu-top__item col-auto">
-                            <a class="menu-top__link" href="#">Контакты</a>
+                            <a class="menu-top__link" href="contacts.html">Контакты</a>
                         </li>
                         <li class="menu-top__item col-auto">
-                            <a class="menu-top__link" href="#">Отзывы</a>
+                            <a class="menu-top__link" href="reviews.html">Отзывы</a>
                         </li>
                         <li class="menu-top__item col-auto">
-                            <a class="menu-top__link" href="#">Частые вопросы</a>
+                            <a class="menu-top__link" href="faq.html">Частые вопросы</a>
                         </li>
                         <li class="menu-top__item col-auto">
                             <a class="menu-top__link" href="#">Полезная информация</a>
                         </li> 
                         <li class="menu-top__item col-auto">
-                            <a class="menu-top__link" href="#">Вакансии</a>
+                            <a class="menu-top__link" href="vacancy.html">Вакансии</a>
                         </li>                        
                         <li class="menu-top__item col-auto">
-                            <a class="menu-top__link" href="#">Водителям</a>
+                            <a class="menu-top__link" href="drivres.html">Водителям</a>
                         </li> 
                     </ul>                                       
                 </nav>
@@ -255,20 +255,20 @@
     
                         <ul class="bottom-box__list second-menu row justify-content-between">
                             <li class="second-menu__item col-auto">
-                                <a class="second-menu__link" href="#">услуги</a>
+                                <a class="second-menu__link" href="service.html">услуги</a>
                             </li>
                             <li class="second-menu__item col-auto">
                                 <a class="second-menu__link" href="#">бизнесу</a>
                             </li>
                             <li class="second-menu__item col-auto">
-                                <a class="second-menu__link" href="#">автопарк</a>
+                                <a class="second-menu__link" href="autopark.html">автопарк</a>
                             </li>
                             <li class="second-menu__item col-auto">
-                                <a class="second-menu__link" href="#">цены</a>
+                                <a class="second-menu__link" href="prices.html">цены</a>
                             </li>
                         </ul> 
 
-                        <button class="bottom-box__btn">                        
+                        <button class="bottom-box__btn js-calcOpen">                        
                             <span class="btn-inside row align-items-center justify-content-between">
                                 <svg class="btn-inside__img">
                                     <use xlink:href="images/icons/sprite.svg#calculator"></use>                                                   
@@ -278,7 +278,7 @@
                             </span>                            
                         </button>
 
-                        <button class="calc-to-open js-openCalc"> 
+                        <button class="calc-to-open js-calcOpen"> 
                             <svg class="calc-to-open__img">
                                 <use xlink:href="images/icons/sprite.svg#calc-mobile"></use>                                                   
                             </svg>                 
@@ -597,7 +597,7 @@
 
                 <a href="tel:+74993223202" class="footer-top__phone col-auto">+7 (499) 322-32-02</a>
 
-                <button class="footer-top__btn">оставить заявку</button>
+                <button class="footer-top__btn js-zayavkaOpen">оставить заявку</button>
 
                 <ul class="footer-top__social footer-icons row justify-content-between">
                     <li class="footer-top__item col-auto">
@@ -885,7 +885,7 @@
     <button class="to-top" aria-label="Наверх"></button>
 
     <!-- Кнопка открыть калькулятор -->
-    <button class="calc-open" aria-label="Открыть калькулятор"></button>
+    <button class="calc-open js-calcOpen" aria-label="Открыть калькулятор"></button>
     
     <!-- Всплывающее меню -->
     <section class="main-menu">
@@ -1035,6 +1035,168 @@
                 </li>
             </ul>
         </div> 
+    </section>   
+
+    <!-- Всплывающее окно калькулятор доставки -->
+    <section class="popup for-calc-popup">
+        <div class="js-scroll popup-calc__scrolling">          
+            <div class="container zayavka__cont">
+                <button class="popup__close calc-popup-close js-calcClose">
+                    <svg class="popup__img">
+                        <use xlink:href="images/icons/sprite.svg#close"></use>                                                   
+                    </svg>
+                </button>            
+    
+                <h2 class="avtopark__heading zayavka__heading calc-popup-heading">Калькулятор перевозок</h2>
+    
+                <form action="#" class="zayavka__form zayzvka-calc">
+                    <div class="zayavka-calc__top js-calcTop">
+                        <div class="zayavka-calc__group js-calcGroup row justify-content-between">
+                            <div class="zayavka-calc__side zayavka-calc__side_left ">
+                                <fieldset class="row justify-content-between">
+                                    <legend class="zayavka-calc__legend">Откуда</legend>
+                                    <input class="service-calc__input zayavka-calc__input service-calc__input_address" type="text" placeholder="Улица">
+                                    <input class="service-calc__input zayavka-calc__input service-calc__input_house" type="text" placeholder="Дом">
+                                </fieldset>
+                            </div>
+        
+                            <div class="zayavka-calc__side zayavka-calc__side_right">
+                                <fieldset class="row justify-content-between">
+                                    <legend class="zayavka-calc__legend">Куда</legend>
+                                    <input class="service-calc__input zayavka-calc__input service-calc__input_address" type="text" placeholder="Улица">
+                                    <input class="service-calc__input zayavka-calc__input service-calc__input_house" type="text" placeholder="Дом">
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="under-line row justify-content-between align-items-center">
+                        <button class="zayavka__add col-auto js-addCalcAddess">Добавить адрес</button>
+    
+                        <button class="zayavka__add col-auto js-removeCalcAddess">Сбросить</button>
+                    </div>                
+    
+                    <div class="zayavka-calc__medium under-line row justify-content-between">
+                        <div class="zayavka-calc__first">
+                            <div class="zayavka-calc__one">
+                                <label for="corners" class="zayavka-calc__heading">
+                                    Грузчики 
+                                    <input class="service-calc__input zayavka-calc__input" type="number" title="Qty" min="0" max="50" step="1" value="1">
+                                        <button class="calc__btn minus js-minus1" type="button" >-</button>
+                                        <button class="calc__btn plus js-plus1" type="button" >+</button>
+                                </label>
+                            </div>
+                            
+                            <div class="zayavka-calc__one">
+                                <label for="passengers" class="zayavka-calc__heading">
+                                    Пассажиры
+                                    <input class="service-calc__input zayavka-calc__input" type="number" title="Pass" min="0" max="50" step="1" value="2">
+                                        <button class="calc__btn minus js-minus2" type="button" >-</button>
+                                        <button class="calc__btn plus js-plus2" type="button" >+</button>
+                                </label>
+                            </div>
+                        </div>
+    
+                        <div class="zayavka-calc__second zayavka-second row justify-content-between">
+                            <div class="zayavka-second__left col-lg-4 col-12">
+                                <h3 class="zayavka-second__heading">
+                                    Машина
+                                </h3>
+    
+                                <h4 class="zayavka-calc__subheading">
+                                    фермер тент
+                                </h4>
+    
+                                <ul class="zayavka-second__list">
+                                    <li class="zayavka-second__item">Высокий 4 метра</li>
+                                    <li class="zayavka-second__item">4м / 2. 2м / 2м</li>
+                                    <li class="zayavka-second__item">Груз 950кг</li>
+                                </ul>
+                            </div>
+    
+                            <div class="zayavka-second__right col-lg-8 col-12">
+                                <figure class="zayavka-second__image">
+                                    <img src="/images/fermer.png" alt="Автомобиль" class="park-list__img">
+                                </figure>
+                            </div>
+                        </div>
+    
+                        <div class="zayavka-calc__third row align-items-start">
+                            <fieldset class="zayavka-calc__data row align-items-start justify-content-between">
+                                <legend class="zayavka-calc__legend">Дата и время</legend>
+                                <input class="service-calc__input zayavka-calc__input service-calc__input_date" type="date">
+                                <input class="service-calc__input zayavka-calc__input service-calc__input_time" type="time">
+                            </fieldset>
+    
+                            <div class="zayavka-calc__timing col">
+                                <label for="time" class="zayavka-calc__heading zayavka-calc__legend">
+                                    Длительность, час
+                                    <input id="time2" class="service-calc__input zayavka-calc__input" type="number" title="Time" min="0" max="50" step="1" value="2">
+                                        <button class="calc__btn minus js-minus3" type="button" >-</button>
+                                        <button class="calc__btn plus js-plus3" type="button" >+</button>
+                                </label>
+                            </div>                        
+    
+                            <div class="zayavka__promo zayavka-promo col-12">
+                                <h4 class="zayavka-calc__subheading">
+                                    ПРОМОКОД
+                                </h4>
+    
+                                <div class="zayavka-promo__box row align-items-center">
+                                    <input class="service-calc__input zayavka-calc__input service-calc__input_promo" type="text" placeholder="Ввести промокод">
+    
+                                    <button class="zayavka-promo__btn">применить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="zayavka__bottom row align-items-start">
+                        <input class="service-calc__input zayavka-calc__input service-calc__input_phone" type="tel" placeholder="Телефон">
+    
+                        <div class="zayavka__box col row">
+                            <button class="zayavka__btn col-auto" type="submit">УСПЕЙ ЗАКАЗАТЬ ЗА 2568 ₽</button>
+    
+                            <p class="zayavka__agree">
+                                Я согласен условиями предоставления услуг и обработкой
+                                моих персональных данных при нажатии “Заказать звонок”
+                            </p>
+                        </div>                    
+                    </div>
+                </form>
+            </div>           
+        </div>
+    </section>
+
+    <!-- Всплывающее окно Оставить заявку -->
+    <section class="popup form-popup js-zayavkaPopup">
+        <div class="js-scroll form-popup__scrolling">          
+            <div class="container form-popup__cont">
+                <button class="popup__close form-popup__close js-zayavkaClose">
+                    <svg class="popup__img">
+                        <use xlink:href="images/icons/sprite.svg#close"></use>                                                   
+                    </svg>
+                </button>            
+    
+                <h2 class="popup__heading">Оставить заявку</h2>
+
+                <p class="popup__subheading">
+                    Заполните форму и&nbsp;мы&nbsp;Вам перезвоним 
+                </p>
+    
+                <form class="popup__form popup-form" action="#">
+                    <input type="text" class="popup-form__input" placeholder="Ваше имя">
+
+                    <input type="tel" class="popup-form__input" placeholder="Ваш телефон">
+                                   
+                    <button class="popup-form__btn" type="submit">ЗАКАЗАТЬ ЗВОНОК</button> 
+                    
+                    <p class="popup-form__agree">
+                        Я согласен с условиями предоставления услуг и обработкой моих персональных данных при нажатии "Заказать звонок"
+                    </p>
+                </form>
+            </div>           
+        </div>
     </section>  
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
