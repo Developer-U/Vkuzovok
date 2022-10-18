@@ -6,7 +6,9 @@
     right: 15%;
     left: auto;
     width: 64%;
-    background: url("../images/drivers.png") no-repeat center right 10%/contain;
+    background-size: contain;
+    background-position: center right 10%;
+    background-repeat: no-repeat;
   }
 
   &__man {
@@ -17,7 +19,9 @@
     left: auto;
     width: 12vw;
     height: 486px;
-    background: url("../images/man.png") no-repeat center/contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__cont {

@@ -62,7 +62,7 @@ address {
 }
 
 a:focus , button:focus , input:focus , a:active , button:active , input:active , textarea:focus , textarea:active {
-  outline: .5px solid $black;
+  outline: .5px solid rgba(0,0,0,.3);
   outline-offset: 2px;
 }
 
@@ -360,6 +360,12 @@ body section , body header , body footer {
     font-size: 16px;
     font-family: $montserratMedium;
     line-height: 19px;
+    transition: color .3s ease-in-out;
+
+    &:hover , &:focus , &:active {
+      color: $deepGreen;
+      transition: color .3s ease-in-out;
+    }
   }
 }
 
@@ -382,7 +388,7 @@ body section , body header , body footer {
 .under-line {
   margin-bottom: 24px;
   padding-bottom: 10px;
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid #eee;
 }
 
 /*Нижнее подчёркивание в таблицах*/
@@ -621,7 +627,7 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   }
 
   & form p {
-    width: 71%;
+    width: 100%;
     margin: 0 auto 1.2rem;
     font-size: 10px;
     font-family: $montserratMedium;
@@ -636,6 +642,53 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   }
 }
 
+.wpcf7-spinner {
+  position: absolute !important;
+  bottom: 0;
+}
+
+
+/*Login forms*/
+
+
+.js-loginClose {
+  margin-bottom: 2rem;
+}
+
+.login-btn__contain {
+  width: 1000px;
+  height: 90vh;
+  padding: 0 12px;
+}
+
+.login-btn__contain .simplebar-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-text {
+  width: 100% !important;
+  height: 40px !important;
+  padding: 10px 8px !important;
+  text-align: center !important;
+  color: #737373 !important;
+  box-shadow: 0 6px 10px rgb(0 0 0 / 15%) !important;
+  border-radius: 8px !important;
+}
+
+
+.ur-submit-button {
+  margin: 10px 0 0 0 !important;
+  border-radius: 40px !important;
+}
+
+.user-registration-Button {
+  width: 100%;
+  margin-top: 1rem;
+
+@include greenBtn();
+}
 
 /*-----Всплывающие окна---Popups------*/
 
@@ -645,6 +698,8 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   justify-content: center;
   position: fixed;
   z-index: 99;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   padding: 80px;
@@ -750,12 +805,49 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   box-shadow: 0px 8px 30px rgba(0, 0, 0, .25);
 }
 
+.popup__scrolling2 {
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, .25);
+}
+
 .popup-zakaz {
   width: 100%;
 }
 
+.popup-zakaz .zayavka-calc__side-main {
+  width: 100%;
+}
+
+.popup-zakaz .zayavka-calc__side-main_left {
+  margin-bottom: 1.4rem;
+}
+
+.popup-zakaz .zayavka-calc__timing input[type=number] {
+  top: -7px;
+  right: -46px;
+}
+
 .popup-zakaz .zayavka-calc__one {
   width: 45%;
+}
+
+.popup-zakaz .service-calc__input_telef {
+  width: 30%;
+  margin-right: 0;
+}
+
+.popup-zakaz .zayavka__cont {
+  padding: 0;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.popup-zakaz .zayavka {
+  padding-bottom: 0;
+}
+
+.popup-zakaz #readyService {
+  width: 60%;
+  margin-left: 6%;
 }
 
 .zayavka-calc__top {
@@ -763,9 +855,17 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   padding-bottom: 0;
 }
 
-.popup-zakaz .zayavka-calc__one input[type=number] , .zayavka-calc__timing input[type=number] {
+.popup-zakaz .zayavka-calc__timing input[type=number] {
   display: inline-block;
   top: 2px;
+  right: -59px;
+  left: auto;
+  margin: 0 0 0 auto;
+}
+
+.zayavka-calc__timing input[type=number] {
+  display: inline-block;
+  top: 12px;
   right: -59px;
   left: auto;
   margin: 0 0 0 auto;
@@ -778,6 +878,14 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
 .popup-zakaz .minus {
   right: 94px;
   left: auto;
+}
+
+.popup-zakaz .js-minus3 {
+  right: 157px;
+}
+
+.popup-zakaz .js-plus3 {
+  right: 50px;
 }
 
 .popup-zakaz .js-minus1 {
@@ -807,7 +915,7 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   margin-bottom: 24px;
   padding-bottom: 10px;
   border-right: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #eee;
 }
 
 .popup-zakaz .zayavka-calc__third {
@@ -833,6 +941,7 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
 
 .popup-zakaz .zayavka-calc__side {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 .popup-zakaz .zayavka-calc__side_left:after {
@@ -893,20 +1002,283 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
 }
 
 
-.js-reviewPopup , .js-zayavkaPopup {
+.js-reviewPopup , .js-zayavkaPopup , .js-otherPopup , .js-vacancyPopup , .js-anketaPopup {
   display: none;
 }
 
 // Кнопки добавления адреса в заявках
 
-.js-removeAddess , .js-removeCalcAddess , .js-removeOfficeAddess {
+.js-removeAddess , .js-removeCalcAddess , .js-removeCalcPopupAddess , .js-loginPopup {
   display: none;
 }
 
-.js-removeAddess::before , .js-removeCalcAddess::before , .js-removeOfficeAddess::before {
+.js-removeAddess::before , .js-removeCalcAddess::before , .js-removeCalcPopupAddess::before {
   transform: rotate(45deg);
 }
 
 .remove-on {
   display: block;
 }
+
+/*------формы-Contact form 7-------*/
+
+
+
+/*Окно спасибо*/
+
+.popup-thanks {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255, .85);
+
+  &__contain {
+    width: 560px;
+    padding: 3rem 2rem 2.3rem;
+    border: 1px solid rgba(0,0,0,.3);
+    text-align: center;
+    background-color: $white;
+    border-radius: 10px;
+  }
+}
+
+.thanks-active {
+  display: flex;
+}
+
+.wpcf7-response-output {
+  display: none;
+}
+
+// Стилизация поля input file
+
+.field__wrapper {
+  position: relative;
+  width: 23%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.field__file , .field__wrapper .wpcf7-form-control-wrap {
+  // visibility: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.wpcf7 input[type="file"] {
+  height: 40px;
+}
+
+.field__file-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-align: center;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
+}
+
+.field__file-fake {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
+  height: 19px;
+  padding: 0 20px;
+  border: none;
+  font-size: 12px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+
+.field__file-fake-get {
+  font-family: $montserratBold;
+  color: rgba(0,0,0,.7);
+}
+
+.field__file-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  border: 2px dashed $black;
+  font-size: 14px;
+  line-height: 140%;
+  color: $black;
+  background: transparent;
+  cursor: pointer;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+}
+
+.field__file-button-get {
+  border-color: lighten($black, 40%);
+  color: lighten($black, 40%);
+}
+
+#serviceForm p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+#serviceForm p:nth-child(3) {
+  width: 75%;
+}
+
+#serviceForm span[data-name="text-455"] , #serviceForm span[data-name="text-456"] {
+  display: block;
+  width: 49%;
+}
+
+#serviceForm span[data-name="text-457"] , #serviceForm span[data-name="text-458"] , #serviceForm span[data-name="text-459"] , #serviceForm span[data-name="text-460"] , #serviceForm span[data-name="text-461"] {
+  display: block;
+  width: 17%;
+}
+
+#serviceForm span[data-name="text-462"] {
+  display: block;
+  width: 23%;
+}
+
+#serviceForm span[data-name="text-463"] {
+  display: block;
+  width: 49%;
+}
+
+#serviceForm span[data-name="tel-405"] {
+  width: 23.5%;
+}
+
+#serviceForm span input {
+  width: 100%;
+}
+
+
+/*---Breadcrumbs---*/
+
+#breadcrumbs {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 12px;
+  line-height: 120%;
+}
+
+#breadcrumbs .breadcrumb_last {
+  font-family: $montserratBold;
+}
+
+.promo-nonce {
+  font-size: 14px;
+  font-family: $montserratMedium;
+  line-height: 120%;
+  color: #900;
+}
+
+
+/*Блоки для видео*/
+
+iframe {
+  width: 100%;
+  height: 400px;
+}
+
+/*Текстовый редактор Wordpress*/
+
+.post p {
+  margin-bottom: 1rem;
+}
+
+.post ul {
+  padding-left: 21px;
+  list-style-type: disc;
+}
+
+.post ul li , .post ol li {
+  margin-bottom: 1rem;
+  font-family: $montserratMedium;
+}
+
+/*-------Кнопка Добавить ещё-------*/
+
+.button-for-more {
+  width: fit-content;
+  min-height: 40px;
+  margin: 0 auto;
+  padding: 8px 30px;
+  font-size: 14px !important;
+
+@include greenBtn();
+}
+
+/*----Рейтинг / Rating-----*/
+.field_type-star_rating_field {
+  padding: 0;
+}
+
+.fa-star:before {
+  color: $deepGreen;
+}
+
+.fa-star-o:before {
+  content: "\f005" !important;
+  color: #afafaf;
+}
+
+.types-404 {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+@include relative();
+}
+
+.popup__scrolling2 {
+  width: 564px;
+  height: 90vh;
+}
+
+.services-article__white {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.types-list__bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  height: auto;
+
+  filter: grayscale(85%) opacity(.22);
+}
+

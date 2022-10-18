@@ -118,3 +118,14 @@
 .services-article:first-of-type , .services-article-active {
   display: flex;
 }
+
+.catalog-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

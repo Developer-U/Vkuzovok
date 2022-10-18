@@ -7,7 +7,7 @@
   }
 
   &__heading {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-size: 18px;
     font-family: $montserratBold;
     line-height: 22px;
@@ -25,6 +25,26 @@
     color: $deepGreen;
     transition: color .3s ease-in-out;
   }
+}
+
+.site-map-cont__article ul {
+  display: block;
+  padding: 0;
+}
+
+.site-map-cont__article div {
+  padding-left: 0;
+}
+
+.site-map-cont__article ul li {
+  margin-bottom: 9px;
+}
+
+.site-map-cont__article ul li a {
+  font-size: 12px;
+  font-family: $montserratMedium;
+  line-height: 14px;
+  text-transform: none;
 }
 
 

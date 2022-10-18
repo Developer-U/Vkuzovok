@@ -2,7 +2,9 @@
   padding-bottom: 148px;
 
   &__cont {
-    background: url("../images/service-hero-bg.png") no-repeat right 40px top 15vh/35% auto;
+    background-size: 35% auto;
+    background-position: right 40px top 15vh;
+    background-repeat: no-repeat;
   }
 
   &__price {
@@ -14,6 +16,7 @@
 
   &__head {
     margin-bottom: 2px;
+    text-transform: uppercase;
   }
 
   &__heading {
@@ -88,7 +91,7 @@
   &__btn {
     position: absolute;
     right: -266px;
-    bottom: 8px;
+    bottom: 33px;
     width: 253px;
     min-height: 48px;
     padding: 2px 6px;
@@ -207,11 +210,7 @@
     }
   }
 
-  &__image {
-    overflow: hidden;
-    height: 174px;
-    margin-bottom: 1.2rem;
-  }
+
 
   &__img {
     width: 100%;
@@ -230,6 +229,19 @@
   &__text {
     margin-bottom: 1rem;
   }
+}
+
+.park-list__image , .zayavka-second__image {
+  overflow: hidden;
+  height: 174px;
+  margin-bottom: 1.2rem;
+}
+
+.zayavka-second__image img {
+  width: 90%;
+  min-width: auto;
+
+  object-fit: cover;
 }
 
 .park-list-params {
@@ -280,7 +292,9 @@
   &__btn {
     min-height: 48px;
     margin-right: .5rem;
+    margin-bottom: 1rem;
     padding: 4px 34px;
+    box-shadow: 0 6px 10px rgb(0 0 0 / 15%);
 
 @include yellowBtn();
   }
@@ -303,7 +317,7 @@
   }
 
   &__group {
-    margin: 0 0 30px 0;
+    margin: 0;
   }
 
   &__one {
@@ -336,13 +350,13 @@
   &__first {
     width: 13.5%;
     padding-right: 1rem;
-    border-right: 1px solid $black;
+    border-right: 1px solid #eee;
   }
 
   &__second {
     width: 45%;
     padding-right: 1rem;
-    border-right: 1px solid $black;
+    border-right: 1px solid #eee;
   }
 
   &__third {
@@ -358,7 +372,7 @@
   &__data {
     width: 60%;
     margin-right: 1.5rem;
-    margin-bottom: 21px;
+    margin-bottom: 34px;
 
 @include relative();
   }
@@ -402,6 +416,7 @@
 
 .service-calc__input_phone {
   width: 190px;
+  margin-right: 1rem;
 }
 
 .service-calc__input_telef {
@@ -441,7 +456,7 @@
 
 .service-calc__input_promo {
   width: 40%;
-  margin-right: .5rem;
+  margin-right: 1rem;
 }
 
 .zayavka-second__item {
@@ -493,5 +508,15 @@
 }
 
 .faq-service {
+  margin-top: 120px;
   padding-bottom: 160px;
+}
+
+.js-serviceParams {
+  display: none;
+  margin-left: 1.5rem;
+}
+
+.js-serviceParams2 , .js-serviceImage , .js-serviceParams2Popup , .js-serviceImagePopup {
+  display: none;
 }

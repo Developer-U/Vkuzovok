@@ -112,9 +112,6 @@
     width: 70%;
   }
 
-  .video-block__right {
-    height: fit-content;
-  }
 
   .cta__cont {
     padding: 54px 50px 6.5vw 9vw;
@@ -235,10 +232,10 @@
 
   .tags-list {
     width: 100%;
+  }
 
-    &__item {
-      margin-bottom: 1rem;
-    }
+  .tags-list li {
+    margin-bottom: 1rem;
   }
 
   .avtopark-article__image {
@@ -388,7 +385,7 @@
   }
 
   .blog-article__image {
-    height: 260px;
+    height: 283px;
   }
 
   .article-page__image {
@@ -464,6 +461,10 @@
     margin: 0 0 0 auto;
   }
 
+  .zayavka-calc__one input[title=QtyPopup] {
+    right: -75px;
+  }
+
   .minus , .plus {
     top: 14px;
   }
@@ -519,11 +520,6 @@
     top: 29px;
   }
 
-  .service-calc__input_phone {
-    width: 30%;
-    margin-right: 0;
-  }
-
   .zayavka__box {
     width: 70%;
     padding-left: 30px;
@@ -569,6 +565,10 @@
     border-radius: 60px;
   }
 
+  .popup-zakaz .zayavka-main__cont {
+    width: 100%;
+  }
+
   .zayavka-main-calc__first {
     width: 35%;
   }
@@ -611,6 +611,58 @@
     width: 33%;
     margin-right: 5.5rem;
   }
+
+  .park-slider__img {
+    height: 137px;
+  }
+
+  .popup-zakaz .zayavka-calc__one input[type=number] {
+    position: absolute;
+    top: -2px;
+    right: 50px;
+  }
+
+  #popupCalcForm .zayavka-calc__timing input[type=number] {
+    position: absolute;
+    top: 36px;
+    right: 50px;
+  }
+
+  #popupCalcForm .js-minus3Popup , #popupCalcForm .js-plus3Popup {
+    top: 42px;
+  }
+
+  #popupCalcForm .js-minus3Popup {
+    right: 120px;
+  }
+
+  #popupCalcForm .js-plus3Popup {
+    right: 0;
+  }
+
+  .popup-zakaz .zayzvka-main-calc__data {
+    width: 59%;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .popup-zakaz .zayavka-main-calc__one input[type=number] {
+    position: absolute;
+    top: 4px;
+  }
+
+  .popup-zakaz #readyService {
+    width: 65%;
+    margin-left: 3%;
+  }
+
+  .popup-zakaz #time3 {
+    top: 20px;
+  }
+
+  .reviews-article__article {
+    width: 579px;
+  }
 }
 
 @media screen and(max-width: 1199px) {
@@ -649,10 +701,10 @@
 
   .second-menu {
     width: 53%;
+  }
 
-    &__link {
-      font-size: 13px;
-    }
+  .second-menu li a {
+    font-size: 13px;
   }
 
   .head-italic {
@@ -701,9 +753,6 @@
     padding-bottom: 60px;
   }
 
-  .video-block__right {
-    padding-left: 14px;
-  }
 
   .video-block__small {
     display: none;
@@ -889,7 +938,7 @@
   }
 
   .faq-page {
-    padding-bottom: 120px;
+    padding-bottom: 80px;
   }
 
   .form-contain form p {
@@ -942,6 +991,38 @@
 
   .main-timing {
     width: 400px;
+  }
+
+  iframe {
+    height: 28vw;
+  }
+
+  .park-slider__img {
+    height: 110px;
+  }
+
+  .popup-zakaz .main-timing {
+    width: 35%;
+  }
+
+  .login-btn__contain {
+    width: 850px;
+  }
+
+  .blog-article {
+    width: 473px;
+  }
+
+  .blog-article__image {
+    height: 231px;
+  }
+
+  #popupCalcForm .zayavka-calc__timing input[type=number] {
+    top: -12px;
+  }
+
+  #popupCalcForm .js-minus3Popup , #popupCalcForm .js-plus3Popup {
+    top: 0px;
   }
 }
 
@@ -1357,10 +1438,6 @@
     padding-bottom: 90px;
   }
 
-  .service-calc__input_phone {
-    margin-right: 1rem;
-  }
-
   .zayavka__btn {
     padding: 4px 24px;
     font-size: 14px;
@@ -1433,7 +1510,7 @@
   }
 
   .blog-article__image {
-    height: 200px;
+    height: 188px;
     border-radius: 30px;
   }
 
@@ -1495,6 +1572,51 @@
     margin-right: 40px;
     margin-bottom: 2.5rem;
   }
+
+  .faq-service {
+    margin-top: 180px;
+  }
+
+  .hero-service__cont {
+    background-size: 38% auto;
+    background-position: top 0 right -98px;
+  }
+
+  .park-slider__img {
+    height: 100px;
+  }
+
+  .video-block__left {
+    margin-bottom: 1rem;
+  }
+
+  .video-block__right {
+    width: 550px;
+    margin-left: 12px;
+  }
+
+  iframe {
+    height: 336px;
+  }
+
+  .login-btn__contain {
+    width: 700px;
+  }
+
+  .blog-article {
+    width: 362px;
+  }
+
+  .for-form {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    top: 22px;
+    right: 24px;
+    left: auto;
+    height: 37px;
+    transform: translateX(202%);
+  }
 }
 
 @media screen and(max-height: 950px) {
@@ -1507,14 +1629,7 @@
     right: 24px;
   }
 
-  .popup-zakaz .zayavka-second__image , .popup-zakaz .zayavka-second__list , .popup-zakaz .zayavka-second__right {
-    display: none;
-  }
 
-  .popup-zakaz .zayavka-second__left {
-    display: flex;
-    width: 100%;
-  }
 
   .popup-zakaz .zayavka-second__heading {
     margin-right: 1rem;
@@ -1624,11 +1739,11 @@
     margin-bottom: .3rem;
   }
 
-  .tags-list__link {
+  .tags-list li a {
     font-size: 10px;
   }
 
-  .tags-list__item {
+  .tags-list li {
     margin-right: 4px;
     margin-bottom: 8px;
     padding: 4px 10px;
@@ -1645,11 +1760,11 @@
   }
 
   .for-form {
-    position: absolute;
-    z-index: 4;
     top: 10px;
-    width: 97%;
+    right: 0;
+    width: 98%;
     margin: 0 auto;
+    padding: 4px 10px;
   }
 
   .search-box__btn_mobile {
@@ -1915,7 +2030,7 @@
     padding-left: 48px;
   }
 
-  .footer-menu__link {
+  .footer-menu li a {
     font-size: 14px;
   }
 
@@ -2226,7 +2341,7 @@
   }
 
   .popup-zakaz .js-plus1 , .popup-zakaz .plus {
-    right: -16px;
+    right: 16px;
   }
 
   .zayavka-calc__one input[type=number] {
@@ -2236,11 +2351,29 @@
   }
 
   .popup-zakaz .plus , .popup-zakaz .minus {
-    top: 1px;
+    top: 11px;
   }
 
   .popup-zakaz .minus {
-    right: 80px;
+    right: 108px;
+  }
+
+  .popup-zakaz .js-plus3 {
+    top: 30px;
+    right: 50px;
+  }
+
+  .popup-zakaz .js-minus3 {
+    top: 30px;
+    right: 130px;
+  }
+
+  .popup-zakaz #time3 {
+    right: 77px;
+  }
+
+  .zayavka-second__image img {
+    width: 67%;
   }
 
   .zayavka-calc__timing {
@@ -2254,10 +2387,6 @@
 
   .minus , .plus {
     top: -1px;
-  }
-
-  .popup-zakaz .js-minus3 {
-    right: 70px;
   }
 
   .plus {
@@ -2302,6 +2431,58 @@
 
   .zayavka-main-calc__one input[type=number] {
     right: 48px;
+  }
+
+  .faq-service {
+    margin-top: 20px;
+  }
+
+  #serviceForm p {
+    flex-flow: row wrap;
+  }
+
+  .js-serviceParams {
+    margin: 0;
+    padding: 0;
+  }
+
+  .serv-params__text {
+    font-size: 12px;
+    font-family: $montserratMedium;
+    line-height: 120%;
+  }
+
+  #breadcrumbs {
+    display: none;
+  }
+
+  .avtopark-mobile__item {
+    margin-bottom: 1rem;
+  }
+
+  .button-for-more {
+    font-size: 11px !important;
+  }
+
+  .popup-zakaz .zayavka {
+    padding: 0;
+  }
+
+  .popup-zakaz .zayavka__add {
+    padding-left: 22px;
+  }
+
+  .popup-zakaz .zayavka-second__image {
+    height: 110px;
+    margin-bottom: 0;
+  }
+
+  .login-btn__contain .simplebar-content-wrapper {
+    justify-content: space-between;
+  }
+
+  .blog-article {
+    width: 340px;
   }
 }
 
@@ -2430,22 +2611,22 @@
     margin-bottom: .3rem;
   }
 
-  .tags-list__link {
+  .tags-list li a {
     font-size: 10px;
   }
 
-  .tags-list__item {
+  .tags-list li {
     margin-right: 4px;
     margin-bottom: 8px;
     padding: 4px 10px;
   }
 
-  .menu-top__item {
+  .menu-top__list li {
     width: 100%;
     padding: 6px 10px;
   }
 
-  .menu-top__link {
+  .menu-top__list li a {
     font-size: 14px;
   }
 
@@ -2468,11 +2649,11 @@
   }
 
   .for-form {
-    position: absolute;
-    z-index: 4;
     top: 10px;
-    width: 97%;
+    right: 0;
+    width: 98%;
     margin: 0 auto;
+    padding: 4px 10px;
   }
 
   .search-box__btn_mobile {
@@ -2504,7 +2685,7 @@
   .avtopark-article__image {
     overflow: hidden;
     width: 100%;
-    height: 106px;
+    height: 71px;
     margin-right: 0;
     margin-bottom: 10px;
   }
@@ -2560,6 +2741,8 @@
     }
 
     &__right {
+      width: 100%;
+      margin-left: 0;
       border-radius: 6px;
     }
 
@@ -2831,7 +3014,7 @@
          -o-transition:         transform .5s linear;
   }
 
-  .footer-menu__link {
+  .footer-menu li a {
     font-size: 14px;
   }
 
@@ -2932,19 +3115,19 @@
     align-items: flex-start !important;
   }
 
-  .service-calc__input , .service-calc__input_type , .service-calc__input_name , .service-calc__input_phone {
+  #serviceForm span , #serviceForm span[data-name="text-462"] , #serviceForm span[data-name="text-463"] , #serviceForm span[data-name="tel-405"] {
     width: 100%;
   }
 
-  .service-calc__input_short {
-    width: 33%;
+  #serviceForm span[data-name="text-457"] , #serviceForm span[data-name="text-458"] , #serviceForm span[data-name="text-459"] , #serviceForm span[data-name="text-460"] , #serviceForm span[data-name="text-461"] {
+    width: 32.4%;
   }
 
-  .service-calc__input_file {
+  #serviceForm .field__wrapper {
     width: 50%;
   }
 
-  .service-calc__input_short:nth-child(3) , .service-calc__input_short:nth-child(4) {
+  #serviceForm span[data-name="text-457"] , #serviceForm span[data-name="text-458"] {
     width: 49%;
   }
 
@@ -3132,7 +3315,7 @@
   }
 
   .blog-article__image {
-    height: 170px;
+    height: 206px;
     border-radius: 20px;
   }
 
@@ -3165,7 +3348,7 @@
   }
 
   .reviews-article__image {
-    height: 250px;
+    height: 206px;
   }
 
   .blog {
@@ -3306,7 +3489,7 @@
     padding: 12px;
   }
 
-  .popup__scrolling , .popup-calc__scrolling {
+  .popup__scrolling , .popup-calc__scrolling , .popup__scrolling2 {
     width: 100%;
   }
 
@@ -3314,9 +3497,18 @@
     width: 100%;
   }
 
-  .zayavka-calc__heading {
-    width: 240px;
+  #popupCalcForm .zayavka-calc__heading {
+    width: 300px;
     margin-bottom: 10px;
+  }
+
+  #popupCalcForm .zayavka-calc__timing input[type=number] {
+    position: static;
+    margin-left: 60px;
+  }
+
+  #popupCalcForm .js-minus3Popup , #popupCalcForm .js-plus3Popup {
+    top: 9px;
   }
 
   .popup-zakaz .js-minus1 {
@@ -3334,11 +3526,15 @@
   }
 
   .popup-zakaz .plus , .popup-zakaz .minus {
-    top: 1px;
+    top: 0;
   }
 
   .popup-zakaz .minus {
-    right: 80px;
+    right: 116px;
+  }
+
+  .popup-zakaz .js-plus1 , .popup-zakaz .plus {
+    right: 12px;
   }
 
   .zayavka-calc__data {
@@ -3375,7 +3571,7 @@
     font-size: 12px;
   }
 
-  .service-calc__input_phone {
+  #serviceForm span[data-name="tel-405"] {
     width: 100%;
   }
 
@@ -3461,13 +3657,118 @@
   .others {
     padding-top: 13px;
   }
+
+  .faq-service {
+    margin-top: 20px;
+  }
+
+  #serviceForm p:nth-child(3) {
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .field__file-fake {
+    position: static;
+  }
+
+  #serviceForm p {
+    flex-flow: row wrap;
+  }
+
+  .hero-service__cont {
+    background-size: 0;
+  }
+
+  .js-serviceParams {
+    margin: 0;
+    padding: 0;
+  }
+
+  .serv-params__text {
+    font-size: 12px;
+    font-family: $montserratMedium;
+    line-height: 120%;
+  }
+
+  #breadcrumbs {
+    display: none;
+  }
+
+  iframe {
+    height: 64vw;
+  }
+
+  .avtopark-mobile__item {
+    margin-bottom: 1rem;
+  }
+
+  .button-for-more {
+    font-size: 11px !important;
+  }
+
+  .popup__cont {
+    padding: 24px 12px;
+  }
+
+  .popup-zakaz .zayavka {
+    padding: 0;
+    padding-bottom: 0;
+  }
+
+  .popup-zakaz .zayavka__add {
+    padding-left: 22px;
+  }
+
+  .popup-zakaz .zayavka-calc__one {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .popup-zakaz .zayavka-main-calc__one input[type=number] {
+    top: -7px;
+  }
+
+  .popup-zakaz .zayavka-second__image {
+    height: 110px;
+    margin-bottom: 0;
+  }
+
+  .popup-zakaz .zayzvka-main-calc__data {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    padding-right: 10px;
+  }
+
+  .popup-zakaz .main-timing {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .popup-zakaz #time3 {
+    top: -9px;
+  }
+
+  .popup-zakaz .service-calc__input_telef {
+    width: 100%;
+  }
+
+  .popup-zakaz #readyService {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .blog-article {
+    width: 390px;
+  }
 }
 
 
 
 @media screen and(max-width: 767px) and(max-height: 420px) {
   .avtopark-article__image {
-    height: 158px;
+    height: 70px;
   }
 
   .cta-block__text {
@@ -3504,7 +3805,12 @@
   }
 
   .blog-article {
-    padding-right: 9rem;
+    width: 332px;
+    padding-right: 2rem;
+  }
+
+  .reviews-article__image , .blog-article__image {
+    height: 162px;
   }
 
   .reviews-letters__image {
@@ -3634,5 +3940,17 @@
   .form-popup__scrolling {
     width: 100%;
     height: 88vh;
+  }
+
+  #serviceForm span[data-name=text-455] , #serviceForm span[data-name=text-456] {
+    width: 100%;
+  }
+
+  .blog-article {
+    width: 320px;
+  }
+
+  .reviews-article__image , .blog-article__image {
+    height: 170px;
   }
 }
