@@ -14,6 +14,13 @@ window.addEventListener('DOMContentLoaded', function(){
     }
   });
 
+  jQuery(document).ready(function($) {
+    var selector = $('input[type="tel"]');
+
+    var im = new Inputmask("+9(999) 999-9999");
+    im.mask(selector);
+  });
+
 
   // Анимация открытия списка городов
 
@@ -161,7 +168,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // Добавление тегов
               
-    var itemTags = document.querySelectorAll('.tags-list li');
+    var itemTags = document.querySelectorAll('.tags-serv-list li');
                         
     var addTagBtn = document.createElement('button'); // Создаём кнопку Добавить           
 
@@ -169,7 +176,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     addTagBtn.innerText = 'Показать ещё';  // Задаём ей текст
 
-    var parentCont = document.querySelector('.tags-list'); // Обратимся к родителю
+    var parentCont = document.querySelector('.tags-serv-list'); // Обратимся к родителю
 
    
 
@@ -186,7 +193,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
       var countD = 7; //Установим счётчик - при клике на кнопку будет добавляться ещё 1 блок отзывов
       addTagBtn.addEventListener('click', function(){
-        var itemTags = document.querySelectorAll('.tags-list li');
+        var itemTags = document.querySelectorAll('.tags-serv-list li');
 
           countD += 1;
 
@@ -268,16 +275,18 @@ window.addEventListener('DOMContentLoaded', function(){
   // Открытие попапа Оставить заявку
   var zayavkaTakeField = document.querySelector('.js-zayavkaPopup');  
   var zayavkaTakeFieldOpen = document.querySelectorAll('.js-zayavkaOpen'); 
-  var zayavkaTakeClose = document.querySelector('.js-zayavkaClose');   
+  var zayavkaTakeClose = document.querySelector('.js-zayavkaClose');
+   
   var flag = false;  
 
   zayavkaTakeFieldOpen.forEach(function(zayavkaOpen){
     zayavkaOpen.addEventListener('click', function(e){  
-        e.preventDefault();
-        
+        e.preventDefault();       
+           
           if(!flag) {
           fadeIn(zayavkaTakeField, 300, 'flex');
-            document.querySelector('body').classList.add('closed');
+            document.querySelector('body').classList.add('closed');            
+              
           } else {
           fadeOut(zayavkaTakeField, 300);
             document.querySelector('body').classList.remove('closed');          
@@ -293,7 +302,38 @@ window.addEventListener('DOMContentLoaded', function(){
               fadeOut(zayavkaTakeField, 300);
               document.querySelector('body').classList.remove('closed');              
             }
-          });                     
+          }); 
+          
+          // Отправка формы
+          var ctaForm = document.querySelector('.js-сta-form'); 
+          ctaForm.addEventListener('wpcf7submit', function(event) {
+            let ctaInputVal = document.querySelector('.cta-name-footer').value,
+            ctaInputTelVal = document.querySelector('.cta-tel-footer').value; // значение обязательного поля
+            console.log(ctaInputVal);
+            console.log(ctaInputTelVal);
+            
+            if( ctaInputVal!== "" && ctaInputTelVal !== "") {  // условие, если поле заполнено
+                document.querySelector('.popup-thanks').classList.add('thanks-active');
+
+                document.querySelector('.popup-thanks').addEventListener('click', function(event) {
+                    if(this == event.target) {
+                        document.querySelector('.popup-thanks').classList.remove('thanks-active');
+                        fadeOut(zayavkaTakeField, 300);
+                        document.querySelector('body').classList.remove('closed');   
+                    }                    
+                });
+
+                setTimeout(() => {
+                    document.querySelector('.popup-thanks').classList.remove('thanks-active');
+                    cf7Output.style.opacity = '0';
+                    cf7Output.style.display = 'none';  
+                    fadeOut(zayavkaTakeField, 300);
+                    document.querySelector('body').classList.remove('closed');        
+                }, 2500 );
+            } else {
+                return false;
+            }
+          }, false);
       });
   });
 
@@ -373,49 +413,13 @@ window.addEventListener('DOMContentLoaded', function(){
           
       });
   });
-
-
+ 
+  // Ограничим высоту текста 
+  var str = $('.types-list__descr').html();
+  str = str.substr(0,200) + '...';//к примеру, если величина блока 200 символов.
+  $('.types-list__descr').html(str);
   
 
-
-
-
-
-  // Ширина активного окна устройства:
-//   var availableScreenWidth = window.screen.availWidth;
-
-//   if(availableScreenWidth < '992') {  // Зададим условие что функция будет работать только на мобильных
-
-//     window.onload = function() {    
-//     var letters = document.getElementsByClassName('reviews-letters__image')
-//       ,letterBtn = document.querySelector('.reviews-letters__btn');
-
-//     // console.log(letters.length);
-
-//     for(let i=3; i<letters.length; i++) {
-//       letters[i].style.display = 'none';
-//     }
-
-//     var countD = 3; //Установим счётчик - при клике на кнопку будет добавляться по 3 письма
-//       letterBtn.addEventListener('click', function(){
-//         var letters = document.getElementsByClassName('reviews-letters__image');
-
-//         countD += 3;
-
-//         if(countD <= letters.length) {
-//           for(let i=0; i<countD; i++) {
-//             letters[i].style.display = 'block';
-//           }
-//         }
-//       });    
-//     }
-
-//   } else {
-//     var letterBtn = document.querySelector('.reviews-letters__btn');
-//     letterBtn.style.display = 'none';
-//   }
-
-  
 });
 
 

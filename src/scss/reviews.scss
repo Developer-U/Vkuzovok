@@ -31,14 +31,6 @@
   padding-bottom: 1.2rem;
   border-bottom: 1px solid #eee;
 
-  &__image {
-    overflow: hidden;
-    width: 112px;
-    height: 100px;
-    margin-right: 8px;
-    border-radius: 55px;
-  }
-
   &__box {
     flex-direction: column;
     justify-content: space-between;
@@ -62,7 +54,7 @@
   &__time {
     font-size: 14px;
     line-height: 20px;
-    color: #8f8f8f;
+    color: #000;
   }
 
   &__rating {
@@ -91,6 +83,22 @@
   }
 }
 
+.one-review__image {
+  overflow: hidden;
+  width: 112px;
+  height: 112px;
+  margin-right: 8px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 100px;
+}  
+
+.one-review__image img {
+  width: 100%;
+  min-width: auto;
+  height: 100%;
+} 
+
 .rev-answer {
   padding-left: 75px;
 
@@ -108,9 +116,10 @@
   }
 
   &__image {
-    width: 116px;
+    width: 124px;
     height: 115px;
     margin-right: 27px;
+    padding: 0;
   }
 }
 
@@ -202,4 +211,10 @@
 
 .field__wrapper_reviews {
   width: 100%;
+}
+
+/*без нижнего бордера*/
+
+.no-padding-bottom {
+  border-bottom: none;
 }

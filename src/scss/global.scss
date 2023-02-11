@@ -43,7 +43,7 @@ button {
 }
 
 input , textarea {
-  border: none;
+  border: 1px solid rgba(0,0,0,.1);
 }
 
 p , h1 , h2 , h3 , h4 , figure {
@@ -62,7 +62,8 @@ address {
 }
 
 a:focus , button:focus , input:focus , a:active , button:active , input:active , textarea:focus , textarea:active {
-  outline: .5px solid rgba(0,0,0,.3);
+  // outline: .5px solid rgba(0,0,0,.3);
+  outline: inherit;
   outline-offset: 2px;
 }
 
@@ -230,6 +231,7 @@ img {
 
 .background-plashka {
   position: absolute;
+  z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -257,7 +259,7 @@ img {
 }
 
 .bg-left-second-green {
-  top: 96vw;
+  top: 84vw;
   left: 0;
   width: 18vw;
   height: 64vw;
@@ -270,7 +272,7 @@ img {
 }
 
 .bg-right-second-grey {
-  top: 227vw;
+  top: 217vw;
   right: 0;
   width: 34vw;
   height: 75vw;
@@ -289,7 +291,7 @@ img {
 
 .bg-right-fourth-grey {
   right: 0;
-  bottom: 135vw;
+  bottom: 117vw;
   width: 16vw;
   height: 68vw;
   background-image: url("../images/lecal-types.svg");
@@ -320,9 +322,8 @@ img {
 
 
 body section , body header , body footer {
-  z-index: 2;
-
-@include relative();
+  // z-index: 2;
+  @include relative();
 }
 
 
@@ -391,6 +392,10 @@ body section , body header , body footer {
   border-bottom: 1px solid #eee;
 }
 
+.hero-service__heading.under-line , .hero-service__params.under-line {
+  border-color: $black;
+}
+
 /*Нижнее подчёркивание в таблицах*/
 .list-dashed {
   padding: 0;
@@ -427,12 +432,111 @@ body section , body header , body footer {
 }
 
 
-/*Кастомизация инпутов type number*/
+/*Кастомизация инпутов type number and calculators*/
+
+.service-calc__input_address , .zayavka-calc__side-main fieldset p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.zayavka-calc__side-main fieldset p span:first-of-type {
+  display: block;
+  width: 78%;
+}
+
+.zayavka-calc__side-main fieldset p span:last-of-type {
+  display: block;
+  width: 19%;
+}
+.zayavka-calc__side-main fieldset p span input {
+  width: 100%;
+}
+.zayavka-calc__side-main fieldset p {
+  padding: 0;
+}
+.wpcf7-form-control-wrap[data-name="acceptance-748"] .wpcf7-list-item {
+  display: block;
+  width: 65%;
+  margin-left: auto;
+}
+.zayavka__bottom .wpcf7-form-control-wrap input[type="checkbox"] {
+  width: fit-content;
+  margin-right: 6px;
+}
+.zayavka__bottom .wpcf7-form-control-wrap[data-name="tel-256"] {
+  width: 190px;
+  margin-right: 1.6rem;
+}
+
+span.wpcf7-acceptance .wpcf7-list-item label {
+  display: flex;
+  align-items: flex-start;
+}
+
+span.wpcf7-acceptance .wpcf7-list-item .wpcf7-list-item-label {
+  font-size: 10px;
+  line-height: 120%;
+}
+
+.plus-minus-btns {
+  width: 125px;
+  margin: 0;
+}
+.zayavka-calc__third fieldset p {
+  padding: 0;
+}
+.plus-minus-btns span.wpcf7-form-control-wrap {
+  width: 54px;
+  padding: 0;
+}
+.zayavka-main-calc__first .zayavka-calc__one:first-of-type {
+  width: 63%;
+}
+.zayavka-main-calc__first .zayavka-calc__one:nth-of-type(2n) {
+  width: 37%;
+}
+.zayavka-promo__box span , .zayavka-promo__box button {
+  padding: 0;
+}
+.zayavka-promo__box .wpcf7-form-control-wrap {
+  width: 40%;
+  margin-right: 1rem;
+}
+.zayavka-promo__box .wpcf7-form-control-wrap input {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.zayavka__bottom .wpcf7-form-control-wrap {
+  width: 30%;
+  margin-right: 1rem;
+  padding: 0;
+}
+.zayavka__bottom .wpcf7-form-control-wrap input {
+  width: 100%;
+}
+.zayavka__bottom p {
+  padding: 0;
+}
+.zayavka__bottom p:nth-of-type(2) {
+  width: 65%;
+  margin-bottom: 10px;
+  margin-left: 3%;
+}
+.zayavka__bottom p:first-of-type {
+  width: 0;
+}
+.zayavka__bottom p:nth-of-type(2) input {
+  width: 100%;
+  margin: 0;
+}
 
 .zayavka-calc__one input[type="number"] , .zayavka-calc__timing input[type="number"] {
   display: block;
   align-items: center;
-  position: relative;
+
+// position: relative;
+  position: static;
   top: 15px;
   left: 0;
   width: 45px;
@@ -444,6 +548,62 @@ body section , body header , body footer {
   background-color: transparent;
 }
 
+.zayavka-calculator__cont {
+  justify-content: space-between;
+  margin: 30px 0 0;
+  padding: 34px 0 0;
+  border-top: 1px solid #ddd;
+}
+.calculator-zayzvka-promo {
+  margin-top: 24px;
+}
+.zayavka-right {
+  width: 43%;
+}
+
+.zayavka-calculator__one {
+  position: relative;
+  width: fit-content;
+  min-width: 160px;
+}
+.zayavka-calculator__one_first {
+  min-width: 250px;
+}
+.zayavka-calculator__one_first select {
+  width: 100%;
+}
+
+.zayavka-calculator__one .plus-minus-btns .wpcf7-form-control-wrap input {
+  width: 54px;
+}
+
+.zayavka-calculator__third {
+  margin-bottom: 2rem;
+
+  gap: 100px;
+}
+.zayavka__bottom_calculator {
+  margin: 0;
+  margin-top: 40px;
+  padding-top: 34px;
+  padding-left: 0;
+  border-top: 1px solid #ddd;
+}
+.wpcf7-form-control-wrap.dynamichidden-825 {
+  display: none;
+}
+.zayavka__bottom_calculator p:nth-of-type(2) {
+  width: 313px;
+}
+.zayavka__bottom_calculator p:nth-of-type(3) {
+  width: 280px;
+  margin-left: 6px;
+}
+.zayavka__bottom_calculator p[data-name="acceptance-749"] {
+  display: block;
+  width: 100%;
+}
+
 #time2 {
   margin: 10px auto 0 auto;
 }
@@ -452,22 +612,36 @@ body section , body header , body footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+
+// position: absolute;
   z-index: 20;
   top: 40px;
   width: 21px;
   height: 21px;
-  font-size: 24px;
-  font-family: $montserratLight;
-  background-color: #eee;
+  font-size: 0;
+
+// font-weight: 600;
+  // font-family: $montserratMedium;
+  // background-color: #eee;
+  // border-radius: 6px;
+  // transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 6px;
-  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+.plus {
+  background-image: url("../images/plus.svg");
+}
+.minus {
+  background-image: url("../images/minus.svg");
 }
 
 .plus:hover , .minus:hover , .plus:focus , .minus:focus , .plus:active , .minus:active {
-  color: #fff;
-  background-color: #333;
-  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  background-color: rgba(0,0,0,.4);
+  border-radius: 6px;
+  transition: background-color .3s ease-in-out;
 }
 
 .plus {
@@ -485,6 +659,37 @@ body section , body header , body footer {
 
 input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-inner-spin-button {
   display: none;
+}
+
+.left-field {
+  display: flex;
+  order: -1;
+  flex-direction: column;
+  width: 13%;
+  min-width: 160px;
+  padding-left: 0;
+
+  gap: 24px;
+}
+.car-cont__box {
+  display: grid;
+  width: 43%;
+
+  column-gap: 14px;
+  grid-template-columns: 1fr 260px;
+}
+.car-cont__right {
+  overflow: hidden;
+  height: 140px;
+}
+.car-cont__right img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+.field-right-top {
+  width: 173px;
 }
 
 
@@ -622,6 +827,8 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
     }
 
     &_textarea[placeholder] {
+      height: 100px;
+      padding: 7px 20px;
       text-align: left;
     }
   }
@@ -645,6 +852,15 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
 .wpcf7-spinner {
   position: absolute !important;
   bottom: 0;
+  width: 24px;
+}
+
+.zayavka-calc__input[type="number"] {
+  text-align: center;
+}
+
+#serviceForm span {
+  padding: 0;
 }
 
 
@@ -828,6 +1044,7 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
 
 .popup-zakaz .zayavka-calc__one {
   width: 45%;
+  padding: 0;
 }
 
 .popup-zakaz .service-calc__input_telef {
@@ -845,30 +1062,14 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   padding-bottom: 0;
 }
 
-.popup-zakaz #readyService {
-  width: 60%;
-  margin-left: 6%;
-}
 
 .zayavka-calc__top {
   margin-bottom: 24px;
   padding-bottom: 0;
 }
 
-.popup-zakaz .zayavka-calc__timing input[type=number] {
-  display: inline-block;
-  top: 2px;
-  right: -59px;
-  left: auto;
-  margin: 0 0 0 auto;
-}
-
 .zayavka-calc__timing input[type=number] {
-  display: inline-block;
-  top: 12px;
-  right: -59px;
-  left: auto;
-  margin: 0 0 0 auto;
+  margin: 0;
 }
 
 .popup-zakaz .minus , .popup-zakaz .plus {
@@ -924,9 +1125,7 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   padding-left: 12px;
 }
 
-.popup-zakaz .zayavka-calc__heading {
-  width: 100%;
-}
+
 
 .popup-zakaz .zayavka-second__left {
   width: 50%;
@@ -991,7 +1190,9 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
 
 .calc-popup-close {
   position: absolute;
-  left: 1231px;
+  z-index: 2;
+  top: 149px;
+  right: 136px;
 }
 
 
@@ -1052,15 +1253,15 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   display: flex;
 }
 
-.wpcf7-response-output {
-  display: none;
-}
+// .wpcf7-response-output {
+//   display: none;
+// }
 
 // Стилизация поля input file
 
 .field__wrapper {
   position: relative;
-  width: 23%;
+  width: 20%;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -1096,16 +1297,20 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   -ms-flex-wrap: wrap;
 }
 
+.wpcf7-form-control-wrap.mask-436 {
+  width: 20%;
+}
+
 .field__file-fake {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 3px;
+  bottom: -4px;
   width: 100%;
   height: 19px;
-  padding: 0 20px;
+  padding: 0;
   border: none;
   font-size: 12px;
 
@@ -1149,6 +1354,8 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
   justify-content: space-between;
   width: 100%;
   padding: 0;
+
+  gap: 8px;
 }
 
 #serviceForm p:nth-child(3) {
@@ -1162,12 +1369,12 @@ input[type="number"]::-webkit-outer-spin-button , input[type="number"]::-webkit-
 
 #serviceForm span[data-name="text-457"] , #serviceForm span[data-name="text-458"] , #serviceForm span[data-name="text-459"] , #serviceForm span[data-name="text-460"] , #serviceForm span[data-name="text-461"] {
   display: block;
-  width: 17%;
+  width: 14%;
 }
 
 #serviceForm span[data-name="text-462"] {
   display: block;
-  width: 23%;
+  width: 27%;
 }
 
 #serviceForm span[data-name="text-463"] {
@@ -1225,7 +1432,7 @@ iframe {
 
 .post ul li , .post ol li {
   margin-bottom: 1rem;
-  font-family: $montserratMedium;
+  font-family: $montserratLight;
 }
 
 /*-------Кнопка Добавить ещё-------*/
@@ -1281,4 +1488,115 @@ iframe {
 
   filter: grayscale(85%) opacity(.22);
 }
+
+
+#newAvtoparkForm .zayavka-calc__side-main_left:after {
+  display: none;
+}
+
+
+.news-cont__scroll {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+// date-time-picker
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default , .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current , .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+  background: #8bd176 !important;
+}
+.wpcf7 form.invalid .wpcf7-response-output , .wpcf7 form.unaccepted .wpcf7-response-output , .wpcf7 form.payment-required .wpcf7-response-output {
+  border-color: #cf2e2e !important;
+}
+
+// contact form 7 validation
+.wpcf7-not-valid-tip {
+  position: absolute;
+  left: -38px;
+  width: 148px;
+  font-size: 10px!important;
+  line-height: 130%;
+}
+
+input.service-calc__input_date + .wpcf7-not-valid-tip , input[type="tel"] + .wpcf7-not-valid-tip {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+
+.fa-star:before {
+  color: #fcb900 !important;
+}
+.artyom-logo {
+  display: block;
+  overflow: hidden;
+  width: 170px;
+  margin-top: 2rem;
+}
+
+.zayavka-calc__side-main .wpcf7-form-control-wrap {
+  padding: 0;
+}
+
+.zayavka-calc__side-main .wpcf7-form-control-wrap input {
+  width: 100%;
+}
+
+.zayavka-calc__side-main .wpcf7-form-control-wrap:first-of-type {
+  width: 68%;
+}
+.zayavka-calc__side-main .wpcf7-form-control-wrap:last-of-type {
+  width: 30%;
+}
+
+/*search city*/
+
+.search_box {
+  position: relative;
+}
+.search_box input[type="text"] {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #fd4836;
+  font-size: 14px;
+  line-height: 35px;
+  text-indent: 15px;
+  color: #222;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  outline: none;
+}
+.search_box input[type="submit"] {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 9px;
+  right: 16px;
+  width: 17px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-indent: -999px;
+  background: url(https://snipp.ru/demo/127/search.png) 0 0 no-repeat;
+  outline: 0;
+}
+
+/* Стили для плашки с результатами */
+.search_result {
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+}
+
+/*search city end*/
 

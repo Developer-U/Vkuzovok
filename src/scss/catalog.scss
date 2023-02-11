@@ -9,15 +9,26 @@
 
   &__bg {
     z-index: -1;
-    top: 22vw;
+    top: 330px;
     right: 8vw;
     width: 77%;
-    height: 58vh;
   }
 
   &__heading {
     margin-bottom: 3.8rem;
   }
+}
+
+.services__bg_left {
+  display: none;
+  top: 1085px;
+  right: auto;
+  left: 0;
+}
+
+.services__bg_third {
+  display: none;
+  top: 1855px;
 }
 
 .services-tabs {

@@ -9,13 +9,28 @@
     line-height: 24px;
   }
 
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    overflow: hidden;
+    min-height: 180px;
+    margin-bottom: 5px;
+  }
+
   &__img {
     position: relative;
     left: -9px;
     width: auto;
     min-width: auto;
-    height: 170px;
+    max-width: 100%;
+    max-height: 170px;
     margin-bottom: 13px;
+
+    object-fit: contain;
   }
 }
 
@@ -53,13 +68,14 @@
 /*Navigation*/
 
 .button-next-el , .button-prev-el , .button-next-el2 , .button-prev-el2 , .button-next-el3 , .button-prev-el3 {
-  top: 64%;
+  top: 58px;
   width: 22px;
   height: 22px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 
 .button-next-el2 , .button-prev-el2 {
   top: 69%;

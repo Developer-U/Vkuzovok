@@ -20,12 +20,11 @@ new Swiper('.park-slider', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-    },      
-
+    },
 
     keyboard: {       
         enabled: true,       
-        pageUpDown: true,
+        pageUpDown: false,
     },
 
     freeMode: {

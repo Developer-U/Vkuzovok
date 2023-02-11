@@ -7,11 +7,11 @@
 // }
 
 .ui-accordion .ui-accordion-header {
+  box-sizing: border-box !important;
   position: relative;
   top: 0;
   right: 0;
   margin: 0;
-  padding: 17px 30px 14px 0;
   border: none;
   border-bottom: 1px solid #eee;
   font-size: 18px;
@@ -24,26 +24,33 @@
   }
 }
 
+.ui-accordion .ui-accordion-header div {
+  padding: 23px 30px 23px 0;
+  font-family: $montserratBold;
+}
+
 .ui-accordion .ui-accordion-content {
   // margin-bottom: 1.5rem;
-  padding: 0 45px 22px 0 !important;
+  padding: 0 !important;
   border: none;
-  border-bottom: 1px solid #eee;
+
+// border-bottom: 1px solid #eee;
   font-size: 14px;
   font-family: $montserratMedium;
   line-height: 140%;
 }
 
+.ui-accordion .ui-accordion-content p {
+  padding: 0 45px 22px 0 !important;
+}
 
-
-
-#accordion .ui-icon-triangle-1-e {
+.ui-icon-triangle-1-e {
   position: absolute;
   z-index: 3;
-  top: 26%;
-  right: -20px;
-  width: 30px;
-  height: 30px;
+  top: 32%;
+  right: -2px;
+  width: 24px;
+  height: 24px;
   opacity: .5;
   background: url("../images/accordion-down.svg") no-repeat center right/contain;
           transition: -webkit-transform .8s linear;
@@ -59,7 +66,7 @@
   font-family: $montserratBold;
 }
 
-#accordion .ui-icon-triangle-1-e:hover , .ui-icon-triangle-1-e:focus {
+.ui-icon-triangle-1-e:hover , .ui-icon-triangle-1-e:focus {
   opacity: .5;
           transition: opacity .5s linear;
 
@@ -67,37 +74,26 @@
        -o-transition: opacity .5s linear;
 }
 
-#accordion .ui-state-active .ui-icon {
+.ui-state-active .ui-icon {
   position: absolute;
   z-index: 3;
-  top: 26%;
-  right: -20px;
-  width: 30px;
-  height: 30px;
+  top: 32%;
+  right: -2px;
+  width: 24px;
+  height: 24px;
   background: url("../images/accordion-up.svg") no-repeat center right/contain;
-  //         transform: rotate(180deg);
-  //         transition: -webkit-transform .5s linear;
-  //         transition:         transform .5s linear;
-  //         transition:         transform .5s linear, -webkit-transform .5s linear;
-
-  // -webkit-transform: rotate(180deg);
-  //     -ms-transform: rotate(180deg);
-  // -webkit-transition: -webkit-transform .5s linear;
-  //      -o-transition:         transform .5s linear;
 }
 
 
-.ui-state-active , .ui-accordion .ui-accordion-header-active , .ui-accordion .ui-accordion-header-active:hover {
-  border-bottom: none;
-}
 
 .ui-accordion-header-active {
   font-family: $montserratBold;
 }
 
 .ui-accordion .ui-accordion-header-active , .ui-accordion .ui-accordion-header-active:hover , .ui-state-active {
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
   color: $black;
+  outline: none !important;
 }
 
 
